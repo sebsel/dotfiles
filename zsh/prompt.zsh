@@ -10,6 +10,9 @@ local ret_status="%(?:%{$fg_bold[green]%}$icon:%{$fg_bold[red]%}$icon%s)"
 #}
 
 function get_pwd(){
+  if [[ $PWD == "$HOME/code" ]]; then
+    echo '~@'; return
+  fi
   git_root=$PWD
   while [[ $git_root != / && ! -e $git_root/.git ]]; do
     git_root=$git_root:h
