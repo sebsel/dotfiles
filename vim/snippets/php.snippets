@@ -1,0 +1,52 @@
+snippet afn
+	function() {
+	    ${1}
+	}
+snippet afna
+	function(${1}) {
+	    ${2}
+	}
+snippet fn
+	function ${1}() {
+	    ${2}
+	}
+snippet fna
+	function ${1}(${2}) {
+	    ${3}
+	}
+snippet met
+	public function ${1}() {
+	    ${2}
+	}
+snippet pmet
+	protected function ${1}() {
+	    ${2}
+	}
+snippet smet
+	public static function ${1}() {
+	    ${2}
+	}
+snippet rg
+	Route::get('${1}', '${2}');
+snippet rp
+	Route::post('${1}', '${2}');
+snippet rga
+	Route::get('${1}', function(){
+	    ${2}
+	});
+snippet rpa
+	Route::post('${1}', function(){
+	    ${2}
+	});
+snippet $
+	$this->${1}
+snippet ifi
+	if (${1}) ${2};
+snippet if:
+	<?php if (${1}): ?>
+	    ${2}
+	<?php endif ?>
+snippet e:
+	<?php echo ${1} ?>
+snippet =
+	<?= ${1} ?>

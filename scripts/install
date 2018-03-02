@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# === VIM ===
+
+# Set up Symlinks
+ln -sf ~/dotfiles/vim ~/.vim
+ln -sf ~/dotfiles/vim/vimrc ~/.vimrc
+
+# Set up Vim plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall

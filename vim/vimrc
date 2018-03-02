@@ -1,0 +1,180 @@
+syntax enable
+
+colorscheme afterglow
+
+hi LineNr ctermbg=bg
+hi vertsplit ctermbg=bg ctermfg=bg
+hi tab ctermbg=green
+
+set guifont=Source_Code_Pro
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
+set backspace=indent,eol,start "Backspace zoals bij andere editors
+let mapleader = ','            "default = '\', maar ',' is makkelijker
+set number                     "zet lijnnummers aan
+set noerrorbells visualbell t_vb=  "No bells!
+set mouse=a
+"set autowriteall  "automatisch saven bij buffer change
+
+"tabs als 4 spaties
+set tabstop=8
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+"set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+"---- Load plugins
+
+so ~/.vim/plugins.vim
+
+
+"---- Searching
+
+set hlsearch                   "Zet hilight voor zoeken
+set incsearch
+
+
+"----- Split management
+
+set splitbelow
+set splitright
+
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+imap <C-c> <esc>
+
+"---- Mappings
+
+"Make it easy to edit the Vimrc
+nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
+nmap <Leader>es :e ~/.vim/snippets<cr>
+
+"Zet highlight search uit met ,spatie
+nmap <Leader><space> :nohlsearch<cr>
+
+"Make NERDTree easier to toggle
+nmap <Leader>t :NERDTreeToggle<cr>
+
+"Make CtrlP voor binnen bestand bereikbaar
+nmap <c-R> :CtrlPBufTag<cr>
+
+"CtrlP voor recent files
+nmap <c-E> :CtrlPMRUFiles<cr>
+
+"Tags
+nmap <Leader>f :tag<space>
+
+
+
+"---- Laravel specifieke mappings
+nmap <Leader>lr :e routes/web.php<cr>
+nmap <Leader>lm :!php artisan make:
+nmap <Leader><Leader>c :CtrlP<cr>app/Http/Controllers/
+nmap <Leader><Leader>m :CtrlP<cr>app/
+nmap <Leader><Leader>v :CtrlP<cr>resources/views/
+
+"---- Kirby specifieke mappings
+nmap <Leader>kk :!kirby make:
+nmap <Leader>kkb :!kirby make:blueprint<space>
+nmap <Leader>kkc :!kirby make:controller<space>
+nmap <Leader>kkp :!kirby make:plugin<space>
+nmap <Leader>kks :!kirby make:snippet<space>
+nmap <Leader>kkg :!kirby make:tag<space>
+nmap <Leader>kkt :!kirby make:template<space>
+nmap <Leader>kku :!kirby make:user<space>
+
+nmap <Leader>ko :e site/config/config.php<cr>
+nmap <Leader>kr :e site/config/routes.php<cr>
+nmap <Leader>kb :CtrlP<cr>site/blueprints/
+nmap <Leader>kc :CtrlP<cr>site/controllers/
+nmap <Leader>km :CtrlP<cr>site/models/
+nmap <Leader>kp :CtrlP<cr>site/plugins/
+nmap <Leader>ks :CtrlP<cr>site/snippets/
+nmap <Leader>kg :CtrlP<cr>site/tags/
+nmap <Leader>kt :CtrlP<cr>site/templates/
+nmap <Leader>ku :CtrlP<cr>site/accounts/
+
+"--- Macros
+let @a="yiw/|^MO$this->^[pa = $^[pa;^[?construct^MOprotected $^[pa^M^[/construct^M/^R\"^M, "
+
+"---- PHP dingen
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
+
+
+
+"---- Plugins settings
+
+"-- CtrlP
+let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+
+"-- NERDTree
+let NERDTreeHijackNetrw = 0
+
+"-- greplace
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
+"-- PHP CS fixer
+let g:php_cs_fixer_level = 'PSR-2'
+nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<cr>
+
+"-- PDV - docblocks voor PHP
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <Leader>d :call pdv#DocumentWithSnip()<cr>
+
+"-- Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+
+"---- Auto Commands
+
+" Automatisch VIMrc file source
+
+augroup autosourcing
+	autocmd!
+	autocmd BufWritePost .vimrc source %
+augroup END
+
+
+" Notes and tips
+"
+" gg = bovenaan file
+" G  = onderaan file
+"
+" zz = zet cursor in het midden
+"
+" v/d + i/a + ( = selecteer/delete alles tussen de haakjes
+"
+" Rebuild_index: `ctags -R`
+"  `,f` / `:tag` om te zoeken
+"  :tn = tag next
+"  :tp = tag previous
+"  :ts = lijst van alle tags
+"  Ctrl+] = ga naar declaratie van functie
+"  Ctrl+^ = ga terug naar laatste edit
+"
+" Zoeken:
+" /iets<enter>
+" daarna `n` voor de volgende plek
