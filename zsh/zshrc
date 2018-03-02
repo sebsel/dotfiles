@@ -23,7 +23,6 @@ export PATH="$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH"
 
 # Plugins
 plugins=(git osx laravel5)
-export $ZSH_THEME=""
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh

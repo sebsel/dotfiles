@@ -1,7 +1,8 @@
 # Based on Gitster by shashankmehta
 # https://github.com/shashankmehta/dotfiles/blob/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme
 
-local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+local icon=$'\ue0b1'
+local ret_status="%(?:%{$fg_bold[green]%}$icon:%{$fg_bold[red]%}$icon%s)"
 
 #function git_prompt_info() {
 #  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
