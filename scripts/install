@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Remove last login from terminal
+touch ~/.hushlogin
+
 # === VIM ===
 
 # Set up Symlinks
