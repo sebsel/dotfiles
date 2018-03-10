@@ -7,8 +7,3 @@ alias gaa="git add ."
 alias gc="git commit -m "
 alias gp="git push"
 alias nah="git reset --hard && git clean -df"
-
-# === Laravel ===
-
-alias art="php artisan"
-

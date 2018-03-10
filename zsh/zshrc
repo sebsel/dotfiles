@@ -19,6 +19,12 @@ export PATH="vendor/bin:$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH"
 
 
+# === aliases ===
+
+source $DOTFILES/git/aliases.zsh
+source $DOTFILES/laravel/aliases.zsh
+
+
 # === ZSH ===
 
 # Plugins
@@ -30,10 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # Load my own prompt
 source $DOTFILES/zsh/prompt.zsh
 
-# Load aliases
-source $DOTFILES/zsh/aliases.zsh
-
-# Set language environment 
+# Set language environment
 # export LANG=en_US.UTF-8
 
 # Colors for folders and the like
@@ -55,4 +58,3 @@ fi
 # Easy ZSH config edit
 alias zshconf="vim ~/.zshrc && source ~/.zshrc"
 alias reload="source ~/.zshrc"
-
