@@ -1,0 +1,25 @@
+[
+	{ "keys": ["ctrl+c"], "command": "exit_insert_mode", "context":
+		[
+			{ "key": "setting.command_mode", "operand": false },
+			{ "key": "setting.is_widget", "operand": false }
+		]
+	},
+
+	{ "keys": ["super+r"], "command": "goto_symbol_in_project" },
+
+	{ "keys": ["super+1"], "command": "toggle_side_bar" },
+	{ "keys": ["super+3"], "command": "open_terminal" },
+
+	{ "keys": ["f6"], "command": "expand_fqcn" },
+	{ "keys": ["shift+f6"], "command": "expand_fqcn", "args": {"leading_separator": true} },
+	{ "keys": ["super+ctrl+u"], "command": "find_use" },
+	{ "keys": ["f5"], "command": "import_namespace" },
+	// { "keys": ["f3"], "command": "implement" },
+	{ "keys": ["shift+f12"], "command": "goto_definition_scope" },
+	{ "keys": ["super+ctrl+i"], "command": "insert_php_constructor_property" },
+
+	{ "keys": ["super+shift+t"], "command": "phpunit_test_suite" },
+	{ "keys": ["super+shift+r"], "command": "phpunit_test_nearest" },
+	{ "keys": ["super+shift+e"], "command": "phpunit_test_last" },
+]

@@ -1,0 +1,32 @@
+{
+	"auto_id_class": true,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/User/SublimeLinter/Newton (rainglow) (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".idea"
+	],
+	"font_face": "Fira Code",
+	"font_size": 13,
+	"ignored_packages":
+	[
+	],
+	"line_padding_bottom": 4,
+	"line_padding_top": 4,
+	"open_files_in_new_window": false,
+	"sidebar_row_padding_medium": true,
+	"sidebar_size_13": true,
+	"tab_size": 2,
+	"tabs_padding_medium": true,
+	"tabs_small": true,
+	"terminal": "iTerm2-v3.sh",
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}

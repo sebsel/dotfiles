@@ -1,0 +1,27 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Diffy",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"Package Control",
+		"PHP Companion",
+		"PHP Getters and Setters",
+		"ProjectManager",
+		"RailsCasts Colour Scheme",
+		"Rainglow",
+		"Sass",
+		"SublimeLinter",
+		"SublimeLinter-php",
+		"Terminal",
+		"Theme - Afterglow",
+		"TypeScript Syntax",
+		"Vue Syntax Highlight"
+	]
+}
