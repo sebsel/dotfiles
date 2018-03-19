@@ -7,3 +7,7 @@ alias gaa="git add ."
 alias gc="git commit -m "
 alias gp="git push"
 alias nah="git reset --hard && git clean -df"
+
+#=== Git Tower ===
+alias tower="gittower"
+
