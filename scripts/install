@@ -3,6 +3,9 @@
 # Remove last login from terminal
 touch ~/.hushlogin
 
+# === Git ===
+ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
+
 
 # === Sublime ===
 
