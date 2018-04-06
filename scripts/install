@@ -4,7 +4,8 @@
 touch ~/.hushlogin
 
 # === Git ===
-ln -sf ~/dotfiles/gitignore_global ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+ln -sf ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
 
 # === Sublime ===
