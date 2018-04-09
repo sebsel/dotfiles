@@ -23,6 +23,7 @@ export PATH="$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH"
 
 source $DOTFILES/git/aliases.zsh
 source $DOTFILES/laravel/aliases.zsh
+source $DOTFILES/phpunit/aliases.zsh
 
 
 # === ZSH ===
