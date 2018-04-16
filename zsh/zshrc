@@ -19,13 +19,6 @@ export PATH="vendor/bin:$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH"
 
 
-# === aliases ===
-
-source $DOTFILES/git/aliases.zsh
-source $DOTFILES/laravel/aliases.zsh
-source $DOTFILES/phpunit/aliases.zsh
-
-
 # === ZSH ===
 
 # Plugins
@@ -56,6 +49,14 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+
+# === aliases ===
+
 # Easy ZSH config edit
 alias zshconf="vim ~/.zshrc && source ~/.zshrc"
 alias reload="source ~/.zshrc"
+
+source $DOTFILES/git/aliases.zsh
+source $DOTFILES/laravel/aliases.zsh
+source $DOTFILES/phpunit/aliases.zsh
+
