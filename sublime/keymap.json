@@ -25,7 +25,8 @@
 
 	// This is probably frowned upon, but I like PHPStorms O to open.
 	{ "keys": ["super+shift+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
-		{ "keys": ["super+alt+o"], "command": "goto_symbol_in_project" },
+	{ "keys": ["super+e"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["super+alt+o"], "command": "goto_symbol_in_project" },
 	{ "keys": ["super+ctrl+o"], "command": "prompt_select_workspace" },
 	{ "keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 	{ "keys": ["super+b"], "command": "goto_definition" },
