@@ -14,7 +14,8 @@ set guioptions-=R
 
 set backspace=indent,eol,start "Backspace zoals bij andere editors
 let mapleader = ','            "default = '\', maar ',' is makkelijker
-set number                     "zet lijnnummers aan
+set relativenumber             "Geef lijnnummers relatief weer...
+set number                     " ... maar hou het huidige lijnnummer
 set noerrorbells visualbell t_vb=  "No bells!
 set mouse=a
 "set autowriteall  "automatisch saven bij buffer change
