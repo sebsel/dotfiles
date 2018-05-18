@@ -62,10 +62,10 @@ nmap <Leader><space> :nohlsearch<cr>
 nmap <Leader>t :NERDTreeToggle<cr>
 
 "Make CtrlP voor binnen bestand bereikbaar
-nmap <c-R> :CtrlPBufTag<cr>
+"nmap <c-R> :CtrlPBufTag<cr>
 
 "CtrlP voor recent files
-nmap <c-E> :CtrlPMRUFiles<cr>
+"nmap <c-E> :CtrlPMRUFiles<cr>
 
 "Tags
 nmap <Leader>f :tag<space>
