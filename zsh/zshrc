@@ -22,7 +22,7 @@ export PATH="$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH"
 # === ZSH ===
 
 # Plugins
-plugins=(git osx laravel5)
+plugins=(git osx laravel5 vi-mode)
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
