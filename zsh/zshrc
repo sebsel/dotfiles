@@ -51,6 +51,7 @@ export EDITOR='vim'
 # Easy ZSH config edit
 alias zshconf="vim ~/.zshrc && source ~/.zshrc"
 alias reload="source ~/.zshrc"
+alias dotfiles="cd $HOME/dotfiles && git fetch && git status -s"
 
 source $DOTFILES/git/aliases.zsh
 source $DOTFILES/laravel/aliases.zsh
