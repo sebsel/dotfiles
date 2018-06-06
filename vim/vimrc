@@ -1,6 +1,10 @@
 syntax enable
 
 colorscheme afterglow
+set nocompatible
+filetype plugin on
+set wildmenu
+set path+=**
 
 hi LineNr ctermbg=bg
 hi vertsplit ctermbg=bg ctermfg=bg

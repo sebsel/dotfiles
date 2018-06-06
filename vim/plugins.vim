@@ -27,7 +27,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'SirVer/ultisnips'
-Plugin 'joestelmach/lint.vim'
+"Plugin 'joestelmach/lint.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
