@@ -1,6 +1,6 @@
 # === Git ===
 
-alias gs="git status"
+alias gs="git status -bs"
 alias gl="git log"
 alias gcom="git checkout master"
 alias gaa="git add ."
