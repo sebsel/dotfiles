@@ -1,14 +1,58 @@
-syntax enable
+" +-------------------+
+" | Vim Configuration |
+" +-------------------+
 
-colorscheme afterglow
+"==> Table of Contents
+" 1. Syntax and bells
+" 2. Files  
+" 3. Mappings
+" 4. Plugins
+
+" --------------------
+"  Chapter 1
+"    Syntax and bells
+" -------------------->
+
+"==> Syntax
+syntax enable
+colorscheme afterglow "TODO where did I pull afterglow from?
+
+
+"==> Mark lines longer than 80 chacaters
+
+"-> This is a snippet that makes the background red. Looks doable.
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/ 
+
+"-> Vim has some functionality for this as well, but it cuts off the lines, so
+"   I need to set the textwidth to something big too.
+set colorcolumn=80,160,240
+set textwidth=240
+
+
+"==> Bells and mouse
+
+set noerrorbells visualbell t_vb=
+set mouse=a
+
+
+"==> Standard cool Vim things
+
 set nocompatible
 filetype plugin on
 set wildmenu
-set path+=**
+
+
+
+
+"==> Need to find out what this does
 
 hi LineNr ctermbg=bg
 hi vertsplit ctermbg=bg ctermfg=bg
 hi tab ctermbg=green
+
+
+"==> Settings for MVim (get rid of it?)
 
 set guifont=Source_Code_Pro
 set guioptions-=l
@@ -16,52 +60,80 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=R
 
-set backspace=indent,eol,start "Backspace zoals bij andere editors
-let mapleader = ','            "default = '\', maar ',' is makkelijker
-set relativenumber             "Geef lijnnummers relatief weer...
-set number                     " ... maar hou het huidige lijnnummer
-set noerrorbells visualbell t_vb=  "No bells!
-set mouse=a
-"set autowriteall  "automatisch saven bij buffer change
 
-"tabs als 4 spaties
+"==> Backspace like you're used to
+
+set backspace=indent,eol,start
+
+
+"==> Use relative linenumbers, but an absolute one for the current line
+
+set relativenumber
+set number
+
+
+"==> Save buffer automatically when closing
+
+"set autowriteall
+
+
+"==> Tabs as 4 spaces
+
 set tabstop=8
 set expandtab
 set softtabstop=4
 set shiftwidth=4
 "set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-"---- Load plugins
-
-so ~/.vim/plugins.vim
 
 
-"---- Searching
+"==> Searching
 
-set hlsearch                   "Zet hilight voor zoeken
+"-> Search hilight, and a way to get rid of it
+"set hlsearch
+nmap <Leader><space> :nohlsearch<cr>
+
+"-> Incremental search: search as you type (we have fast computers now)
 set incsearch
 
 
-"----- Split management
+" ----------------------
+"  Chapter X
+"    Splits and windows
+" ---------------------->
 
-set splitbelow
-set splitright
+"==> Split management
+
+"set splitbelow
+"set splitright
+
+
+"==> Window Management
+"-> Normally one would use Ctrl+W and J/K/H/L to navigate from one pane to
+"   another, but that's a lot of keystrokes. With these mappings, we only lose
+"   the default Ctrl+L for redraw, the rest is unused.
 
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
-imap <C-c> <esc>
 
-"---- Mappings
 
-"Make it easy to edit the Vimrc
+" --------------------
+"  Chapter 2
+"    Files
+" -------------------->
+
+"==> Set a recursive fuzzy search
+
+set path+=**
+
+
+"==> Make it easy to edit the Vimrc
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
 nmap <Leader>es :e ~/.vim/snippets<cr>
 
-"Zet highlight search uit met ,spatie
-nmap <Leader><space> :nohlsearch<cr>
 
 "Make NERDTree easier to toggle
 nmap <Leader>t :NERDTreeToggle<cr>
@@ -76,6 +148,19 @@ nmap <Leader>t :NERDTreeToggle<cr>
 nmap <Leader>f :tag<space>
 
 
+" --------------------
+"  Chapter 3
+"    Plugins
+" -------------------->
+
+"==> Load plugins
+so ~/.vim/plugins.vim
+
+
+" --------------------
+"  Chapter 4
+"    Mappings
+" -------------------->
 
 "---- Laravel specifieke mappings
 nmap <Leader>lr :e routes/web.php<cr>
@@ -155,11 +240,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 "---- Auto Commands
 
-" Automatisch VIMrc file source
-
+"==> Source the .vimrc-file once when we save it
 augroup autosourcing
-	autocmd!
-	autocmd BufWritePost .vimrc source %
+    autocmd!
+    autocmd BufWritePost .vimrc source %
 augroup END
 
 
