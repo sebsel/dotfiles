@@ -113,11 +113,12 @@ set incsearch
 "   another, but that's a lot of keystrokes. With these mappings, we only lose
 "   the default Ctrl+L for redraw, the rest is unused.
 
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
-nmap <C-H> <C-W><C-H>
-nmap <C-L> <C-W><C-L>
-
+"nmap <C-J> <C-W><C-J>
+"nmap <C-K> <C-W><C-K>
+"nmap <C-H> <C-W><C-H>
+"nmap <C-L> <C-W><C-L>
+"-> This is still current, but I now have a plugin that also
+"   makes this work with Tmux panes.
 
 " --------------------
 "  Chapter 2

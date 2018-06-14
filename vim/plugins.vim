@@ -27,6 +27,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
 Plugin 'SirVer/ultisnips'
+Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'joestelmach/lint.vim'
 
 call vundle#end()            " required
