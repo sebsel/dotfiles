@@ -27,6 +27,7 @@ Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'tobyS/pdv'
 Plugin 'tobyS/vmustache'
 Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vinegar'
 
