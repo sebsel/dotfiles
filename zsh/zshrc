@@ -53,6 +53,9 @@ alias zshconf="vim ~/.zshrc && source ~/.zshrc"
 alias reload="source ~/.zshrc"
 alias dotfiles="cd $DOTFILES && git fetch && git status -sb"
 
+# I keep doing this
+alias :q="exit"
+
 source $DOTFILES/git/aliases.zsh
 source $DOTFILES/laravel/aliases.zsh
 source $DOTFILES/phpunit/aliases.zsh
