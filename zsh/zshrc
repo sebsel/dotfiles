@@ -45,6 +45,10 @@ export EDITOR='vim'
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# fix arrows in tmux
+bindkey '^R' history-incremental-search-backward
+bindkey -e
+
 
 # === aliases ===
 
