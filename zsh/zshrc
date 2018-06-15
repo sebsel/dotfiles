@@ -9,9 +9,6 @@ export DOTFILES="$HOME/dotfiles"
 
 # === Paths ===
 
-# TODO a better way of doing this
-export PATH="$DOTFILES/todo:$PATH"
-
 # For Ruby things
 export PATH="$HOME/.gem/bin:$PATH"
 
@@ -51,6 +48,11 @@ export EDITOR='vim'
 # fix arrows in tmux
 bindkey '^R' history-incremental-search-backward
 bindkey -e
+
+# === apps ===
+
+# some commands for easy journaling
+source $DOTFILES/todo/aliases.zsh
 
 
 # === aliases ===
