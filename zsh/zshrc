@@ -9,6 +9,9 @@ export DOTFILES="$HOME/dotfiles"
 
 # === Paths ===
 
+# TODO a better way of doing this
+export PATH="$DOTFILES/todo:$PATH"
+
 # For Ruby things
 export PATH="$HOME/.gem/bin:$PATH"
 
