@@ -135,10 +135,13 @@ set incsearch
 set path+=**
 
 
-"==> Make it easy to edit the Vimrc
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
-nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
-nmap <Leader>es :e ~/.vim/snippets<cr>
+"==> Make it easy to edit config
+nmap <Leader>cv :e $MYVIMRC<cr>
+nmap <Leader>cp :e ~/.vim/plugins.vim<cr>
+nmap <Leader>cs :e ~/.vim/snippets<cr>
+nmap <Leader>ct :e ~/.tmux.conf<cr>
+nmap <Leader>cz :e ~/.zshrc<cr>
+nmap <Leader>c  :e ~/dotfiles<cr>
 
 
 "==> Toggle NERDTree
@@ -177,33 +180,36 @@ so ~/.vim/plugins.vim
 "    Mappings
 " -------------------->
 
-"---- Laravel specifieke mappings
-nmap <Leader>lr :e routes/web.php<cr>
+"==> Quickly access Laravel files
 nmap <Leader>lm :!php artisan make:
-nmap <Leader><Leader>c :CtrlP<cr>app/Http/Controllers/
-nmap <Leader><Leader>m :CtrlP<cr>app/
-nmap <Leader><Leader>v :CtrlP<cr>resources/views/
+nmap <Leader>lr  :e routes/web.php<cr>
+nmap <Leader>la  :CtrlP<cr>app/
+nmap <Leader>lae :CtrlP<cr>app/Exceptions/
+nmap <Leader>lac :CtrlP<cr>app/Http/Controllers/
+nmap <Leader>lam :CtrlP<cr>app/Models/
+nmap <Leader>laj :CtrlP<cr>app/Jobs/
+nmap <Leader>lap :CtrlP<cr>app/Providers/
+nmap <Leader>las :CtrlP<cr>app/Services/
+nmap <Leader>lp  :CtrlP<cr>app/Processors/
+nmap <Leader>lc  :CtrlP<cr>config/
+nmap <Leader>ld  :CtrlP<cr>database/
+nmap <Leader>lj  :CtrlP<cr>resources/assets/js/
+nmap <Leader>ls  :CtrlP<cr>resources/assets/sass/
+nmap <Leader>lv  :CtrlP<cr>resources/views/
+nmap <Leader>lt  :CtrlP<cr>tests/
 
-"---- Kirby specifieke mappings
+"==> Quickly access Kirby files
 nmap <Leader>kk :!kirby make:
-nmap <Leader>kkb :!kirby make:blueprint<space>
-nmap <Leader>kkc :!kirby make:controller<space>
-nmap <Leader>kkp :!kirby make:plugin<space>
-nmap <Leader>kks :!kirby make:snippet<space>
-nmap <Leader>kkg :!kirby make:tag<space>
-nmap <Leader>kkt :!kirby make:template<space>
-nmap <Leader>kku :!kirby make:user<space>
-
-nmap <Leader>ko :e site/config/config.php<cr>
-nmap <Leader>kr :e site/config/routes.php<cr>
-nmap <Leader>kb :CtrlP<cr>site/blueprints/
-nmap <Leader>kc :CtrlP<cr>site/controllers/
-nmap <Leader>km :CtrlP<cr>site/models/
-nmap <Leader>kp :CtrlP<cr>site/plugins/
-nmap <Leader>ks :CtrlP<cr>site/snippets/
-nmap <Leader>kg :CtrlP<cr>site/tags/
-nmap <Leader>kt :CtrlP<cr>site/templates/
-nmap <Leader>ku :CtrlP<cr>site/accounts/
+nmap <Leader>kc  :e site/config/config.php<cr>
+nmap <Leader>kr  :e site/config/routes.php<cr>
+nmap <Leader>ksb :CtrlP<cr>site/blueprints/
+nmap <Leader>ksc :CtrlP<cr>site/controllers/
+nmap <Leader>ksm :CtrlP<cr>site/models/
+nmap <Leader>ksp :CtrlP<cr>site/plugins/
+nmap <Leader>kss :CtrlP<cr>site/snippets/
+nmap <Leader>ksg :CtrlP<cr>site/tags/
+nmap <Leader>kst :CtrlP<cr>site/templates/
+nmap <Leader>ksu :CtrlP<cr>site/accounts/
 
 "--- Macros
 let @a="yiw/|^MO$this->^[pa = $^[pa;^[?construct^MOprotected $^[pa^M^[/construct^M/^R\"^M, "
