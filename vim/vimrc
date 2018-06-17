@@ -136,14 +136,23 @@ nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
 nmap <Leader>es :e ~/.vim/snippets<cr>
 
 
-"Make NERDTree easier to toggle
+"==> Toggle NERDTree
 nmap <Leader>t :NERDTreeToggle<cr>
 
-"Make CtrlP voor binnen bestand bereikbaar
-"nmap <c-R> :CtrlPBufTag<cr>
 
-"CtrlP voor recent files
-"nmap <c-E> :CtrlPMRUFiles<cr>
+"==> I know the thing is called CtrlP but no
+let g:ctrlp_map = '<Leader>p'
+nmap <Leader>r :CtrlPBufTag<cr>
+nmap <Leader>e :CtrlPMRUFiles<cr>
+
+"-> CtrlP ignores
+let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:10'
+
+
+"==> Leave Netrw alone, NERDTree!
+let NERDTreeHijackNetrw = 0
+
 
 "Tags
 nmap <Leader>f :tag<space>
@@ -213,12 +222,6 @@ autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
 "---- Plugins settings
 
-"-- CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
-
-"-- NERDTree
-let NERDTreeHijackNetrw = 0
 
 "-- greplace
 set grepprg=ag
