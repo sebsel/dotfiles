@@ -13,6 +13,10 @@
 "    Syntax and bells
 " -------------------->
 
+"==> All the colors
+set t_Co=256
+
+
 "==> Syntax
 syntax enable
 colorscheme afterglow "TODO where did I pull afterglow from?
@@ -52,9 +56,10 @@ hi vertsplit ctermbg=bg ctermfg=bg
 hi tab ctermbg=green
 
 
-"==> Settings for MVim (get rid of it?)
 
-set guifont=Source_Code_Pro
+"==> Settings for MVim: font and remove bars
+
+set guifont=Fira_Code
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
