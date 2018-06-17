@@ -94,12 +94,23 @@ set shiftwidth=4
 
 "==> Searching
 
-"-> Search hilight, and a way to get rid of it
-"set hlsearch
-nmap <Leader><space> :nohlsearch<cr>
+"-> Search highligh if I want to
+nmap <Leader><space> :set hlsearch! hlsearch?<cr>
 
 "-> Incremental search: search as you type (we have fast computers now)
 set incsearch
+
+"-> I keep forgetting the search is case sensitive, so ignore
+set ignorecase
+
+"-> This makes the search insensitive if you search for lowercase
+"   but sensitive if there's a capital in your search somewhere.
+set smartcase
+
+"-> But, because this also applies to replacements, I want to be able
+"   to toggle it quickly. (https://stackoverflow.com/q/2287440)
+nmap <Leader>C :set ignorecase! ignorecase?<cr>
+
 
 
 " ----------------------
