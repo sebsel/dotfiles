@@ -57,13 +57,18 @@ hi tab ctermbg=green
 
 
 
-"==> Settings for MVim: font and remove bars
+"==> Settings for MVim
 
-set guifont=Fira_Code
-set guioptions-=l
-set guioptions-=L
-set guioptions-=r
-set guioptions-=R
+"-> Font and breathing room
+set guifont=Fira\ Code:h13
+set linespace=15
+
+"-> Don't use GUI tabs
+set guioptions-=e
+
+"-> No scrollbars all around
+set guioptions-=l guioptions-=L guioptions-=r guioptions-=R
+
 
 
 "==> Backspace like you're used to
