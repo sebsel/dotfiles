@@ -49,11 +49,20 @@ set wildmenu
 
 
 
-"==> Need to find out what this does
+"==> Layout tweaking
 
-hi LineNr ctermbg=bg
-hi vertsplit ctermbg=bg ctermfg=bg
-hi tab ctermbg=green
+"-> remove the background color from the numberbar
+highlight LineNr ctermbg=bg
+
+"-> hide the dashes between vertical splits
+highlight vertsplit ctermbg=bg ctermfg=bg
+
+"-> highlight tab-characters to warn you 
+highlight tab ctermbg=green
+
+"-> Jeffrey Way's left padding hack
+set foldcolumn=1
+highlight foldcolumn ctermbg=bg
 
 
 
