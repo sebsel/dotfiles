@@ -1,37 +1,81 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+"-> Vundle requires these options
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
+"-> Start Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 
 
-" List of the plugins
+
+"==> Obligatory tpope plugins
+
+"-> Use - for fast file browsing and more
+Plugin 'tpope/vim-vinegar'
+
+"-> Adds quick ways to comment stuff out
+Plugin 'tpope/vim-commentary'
+
+"-> Change the surrounding quotes and more
+Plugin 'tpope/vim-surround'
+
+"-> Use Ctrl+A and Ctrl+X to increment and decrement dates
+Plugin 'tpope/vim-speeddating'
+
+
+
+"==> Integrations
+
+"-> Use Git from within Vim
+Plugin 'tpope/vim-fugitive'
+
+"-> Use Ctrl+H,J,K,L to switch between spits, both Vim splits
+"   and tmux splits. (It is magic but feels so natural.)
+Plugin 'christoomey/vim-tmux-navigator'
+
+
+
+"==> Files and navigations
+
+"-> For if you can't remember where you wanted to go, but also
+"   don't want to think about it too hard.
+Plugin 'scrooloose/nerdtree'
+
+"-> Fuzzy search; I want to be hipster and don't use it, but I like it
+"   from time to time, so I mapped it to LeaderP and be done with it.
+Plugin 'ctrlpvim/ctrlp.vim'
+
+
+
+"==> Search and replace
+
+"-> Search fast
+Plugin 'rking/ag.vim'
+Plugin 'skwp/greplace.vim'
+
+
+
+"==> PHP stuff
+
+
+"==> Unsorted Plugins
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
 "Plugin 'joestelmach/lint.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'skwp/greplace.vim'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'tobyS/pdv'
 Plugin 'tobyS/vmustache'
 Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-speeddating'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vinegar'
 
+"-> End Vundle
 call vundle#end()            " required
 filetype plugin indent on    " required
+

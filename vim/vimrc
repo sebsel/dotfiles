@@ -256,13 +256,22 @@ autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
 
 
-"---- Plugins settings
+"=== Plugins settings ===
+
+"==> Ag (rking/ag.vim)
+"-> map Leader search, to abstract the Ag away
+nmap <Leader>s :Ag<space>
 
 
-"-- greplace
+"==> Greplace (skqp/greplace.vim)
+"-> map Leader capital search, to abstract Greplace away
+nmap <Leader>S :Gsearch<space>
+"-> Make greplace work with Ag, for search-and-replaces
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
+
+"==> Unsorted plugin config
 "-- PHP CS fixer
 let g:php_cs_fixer_level = 'PSR-2'
 nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<cr>
