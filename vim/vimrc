@@ -46,6 +46,14 @@ autocmd FileType markdown,text setlocal linebreak
 autocmd FileType markdown,text setlocal colorcolumn=
 
 
+"==> 'Spelling!'
+
+"-> Quick way to enable spelling
+nmap <silent> <Leader>znl :set spell spelllang=nl<cr>
+nmap <silent> <Leader>zen :set spell spelllang=en<cr>
+nmap <silent> <Leader>zz  :set nospell<cr>
+
+
 
 "==> Bells and mouse
 
