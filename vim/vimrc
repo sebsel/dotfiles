@@ -112,14 +112,14 @@ set number
 "set autowriteall
 
 
-"==> Tabs as 4 spaces
+"==> The tabs or spaces debate
 
-set tabstop=8
+"-> keep tabstop equal to softtabstop and shiftwidth
+set tabstop=4 softtabstop=4 shiftwidth=4
+
+"-> use spaces instead of tabs 
+"   <c-v><c-i> in insert mode inserts a tab character if you need it
 set expandtab
-set softtabstop=4
-set shiftwidth=4
-"set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
-
 
 
 "==> Searching
