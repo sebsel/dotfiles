@@ -29,13 +29,22 @@ colorscheme afterglow "TODO where did I pull afterglow from?
 "==> Mark lines longer than 80 chacaters
 
 "-> This is a snippet that makes the background red. Looks doable.
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v./ 
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v./ 
 
-"-> Vim has some functionality for this as well, but it cuts off the lines, so
-"   I need to set the textwidth to something big too.
-"set colorcolumn=80,160,240
-"set textwidth=999999
+"-> Vim has functionality for this as well, but be sure to remove the t-flag 
+"   from the formatoptions, or it will break lines for you. (Yuck.) 
+set colorcolumn=80
+set formatoptions=
+
+"-> I want to toggle this as a sort of 'Text mode'
+"nmap <Leader>vt :set linebreak<cr>
+"autocmd OptionSet linebreak :match none
+
+"-> But you know what? Let Vim do it for me
+autocmd FileType markdown,text setlocal linebreak
+autocmd FileType markdown,text setlocal colorcolumn=
+
 
 
 "==> Bells and mouse
