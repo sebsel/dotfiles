@@ -8,6 +8,10 @@
 " 3. Mappings
 " 4. Plugins
 
+"==> But first, let me load the plugins
+so ~/.vim/plugins.vim
+
+
 " --------------------
 "  Chapter 1
 "    Syntax and bells
@@ -42,8 +46,6 @@ set mouse=a
 
 "==> Standard cool Vim things
 
-set nocompatible
-filetype plugin on
 set wildmenu
 
 
@@ -190,14 +192,6 @@ let NERDTreeHijackNetrw = 0
 "Tags
 nmap <Leader>f :tag<space>
 
-
-" --------------------
-"  Chapter 3
-"    Plugins
-" -------------------->
-
-"==> Load plugins
-so ~/.vim/plugins.vim
 
 
 " --------------------
