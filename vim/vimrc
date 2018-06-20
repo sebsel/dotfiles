@@ -40,8 +40,22 @@ match OverLength /\%81v./
 
 "==> Bells and mouse
 
+"-> Turn off the bell
 set noerrorbells visualbell t_vb=
+
+"-> Knowning all the keybindings is no excuse to turn off mouse support
 set mouse=a
+
+
+"==> Show invisible characters
+
+"-> Toggle invisible characters
+nmap <Leader>vi :set list!<cr>
+
+"-> Take better chars for those invisible characters
+set listchars=tab:▸\ ,eol:¬,space:∙,nbsp:◦
+
+
 
 
 "==> Standard cool Vim things
