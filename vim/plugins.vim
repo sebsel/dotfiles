@@ -76,6 +76,6 @@ Plugin 'tobyS/vmustache'
 Plugin 'tomtom/tlib_vim'
 
 "-> End Vundle
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on 
 
