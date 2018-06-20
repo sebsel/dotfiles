@@ -180,6 +180,10 @@ let g:ctrlp_map = '<Leader>p'
 nmap <Leader>r :CtrlPBufTag<cr>
 nmap <Leader>e :CtrlPMRUFiles<cr>
 
+"-> Use %% on the command line to get the directory of the current file
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+nmap <Leader>E :e %%
+
 "-> CtrlP ignores
 let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:10'
