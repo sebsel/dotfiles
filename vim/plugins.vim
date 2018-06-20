@@ -47,6 +47,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 
+"==> Writing human readable text
+
+"-> Makes the window less broad. I want lines of 80 chars, but no linebreaks
+Plugin 'junegunn/goyo.vim'
+
 
 "==> Search and replace
 

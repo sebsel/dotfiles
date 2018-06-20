@@ -300,6 +300,26 @@ set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
 
+"==> Goyo (junegunn/goyo.vim)
+nmap <Leader>vg :Goyo<cr>
+"-> Don't do that margin stuff
+let g:goyo_margin_top = 1
+let g:goyo_margin_bottom = 1
+"-> Hide stuff when entering Goyo mode
+function! s:goyo_enter()
+  silent !tmux set status off
+  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set scrolloff=999
+endfunction
+function! s:goyo_leave()
+  silent !tmux set status on
+  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set scrolloff=5
+endfunction
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
 "==> Unsorted plugin config
 "-- PHP CS fixer
 let g:php_cs_fixer_level = 'PSR-2'
