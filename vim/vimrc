@@ -167,8 +167,9 @@ nmap <Leader>C :set ignorecase! ignorecase?<cr>
 
 "==> Split management
 
-"set splitbelow
-"set splitright
+"-> It feels way more natural to me
+set splitbelow
+set splitright
 
 
 "==> Window Management
