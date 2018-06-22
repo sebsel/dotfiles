@@ -67,5 +67,6 @@ alias :q="exit"
 
 source $DOTFILES/git/aliases.zsh
 source $DOTFILES/laravel/aliases.zsh
+source $DOTFILES/macos/aliases.zsh
 source $DOTFILES/php/aliases.zsh
 
