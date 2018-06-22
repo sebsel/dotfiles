@@ -251,6 +251,7 @@ nmap <Leader>lj  :CtrlP<cr>resources/assets/js/
 nmap <Leader>ls  :CtrlP<cr>resources/assets/sass/
 nmap <Leader>lv  :CtrlP<cr>resources/views/
 nmap <Leader>lt  :CtrlP<cr>tests/
+nmap <Leader>li  :e vendor/laravel/framework/src/Illuminate<cr>
 
 "==> Quickly access Kirby files
 nmap <Leader>kk :!kirby make:
