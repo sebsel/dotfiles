@@ -275,20 +275,6 @@ nmap <Leader>ksu :CtrlP<cr>site/accounts/
 "--- Macros
 let @a="yiw/|^MO$this->^[pa = $^[pa;^[?construct^MOprotected $^[pa^M^[/construct^M/^R\"^M, "
 
-"---- PHP dingen
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a', 'n')
-endfunction
-autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
-
-function! IPhpExpandClass()
-    call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
 
 
@@ -325,6 +311,25 @@ function! s:goyo_leave()
 endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
+"==> PHP namespaces (arnaud-lb/vim-php-namespace)
+"-> Import use/namespaces
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a', 'n')
+endfunction
+"TODO Remap these to make sense
+autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+"-> Expand class to fully qualified classname
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
+
 
 
 "==> Unsorted plugin config

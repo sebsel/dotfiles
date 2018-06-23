@@ -63,12 +63,17 @@ Plugin 'skwp/greplace.vim'
 
 "==> PHP stuff
 
+"-> An up to date PHP syntax highlighter
+Plugin 'StanAngeloff/php.vim'
+
+"-> Import classes and add namespaces easily
+Plugin 'arnaud-lb/vim-php-namespace'
+
+
 
 "==> Unsorted Plugins
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
