@@ -75,18 +75,22 @@ Plugin 'arnaud-lb/vim-php-namespace'
 
 
 "==> Unsorted Plugins
-Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'SirVer/ultisnips'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
-Plugin 'garbas/vim-snipmate'
 "Plugin 'joestelmach/lint.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'tobyS/pdv'
 Plugin 'tobyS/vmustache'
+
+"-> 2 dependencies + snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+
+"-> Just use `:!php-cs-fixer`?
+Plugin 'stephpy/vim-php-cs-fixer'
 
 "-> End Vundle
 call vundle#end()
