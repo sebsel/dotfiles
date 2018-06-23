@@ -23,6 +23,9 @@ Plugin 'tpope/vim-surround'
 "-> Use Ctrl+A and Ctrl+X to increment and decrement dates
 Plugin 'tpope/vim-speeddating'
 
+"-> Various [ operations I do not wish to miss out on
+Plugin 'tpope/vim-unimpaired'
+
 
 
 "==> Integrations
