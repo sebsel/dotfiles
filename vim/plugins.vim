@@ -55,6 +55,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 "-> Makes the window less broad. I want lines of 80 chars, but no linebreaks
 Plugin 'junegunn/goyo.vim'
 
+"-> Task manager in vim
+Plugin 'aaronbieber/vim-quicktask'
+
 
 "==> Search and replace
 
