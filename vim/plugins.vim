@@ -63,6 +63,11 @@ Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 
 
+"==> Time traveling
+
+"-> Traversing the undo-tree in graphical manner
+Plugin 'sjl/gundo.vim'
+
 
 "==> PHP stuff
 
