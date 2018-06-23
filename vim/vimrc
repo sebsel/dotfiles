@@ -79,6 +79,8 @@ set listchars=tab:▸\ ,eol:¬,space:∙,nbsp:◦
 
 set wildmenu
 
+"-> Keep the undo tree between sessions
+set undofile
 
 
 
