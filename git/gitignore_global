@@ -1,4 +1,7 @@
 .idea
+.vscode
 .DS_Store
+tags
 *.swp
 *.un~
+.elixir_ls
