@@ -55,9 +55,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 "-> Makes the window less broad. I want lines of 80 chars, but no linebreaks
 Plugin 'junegunn/goyo.vim'
 
-"-> Task manager in vim
-Plugin 'aaronbieber/vim-quicktask'
-
 
 "==> Search and replace
 
@@ -80,10 +77,12 @@ Plugin 'StanAngeloff/php.vim'
 "-> Import classes and add namespaces easily
 Plugin 'arnaud-lb/vim-php-namespace'
 
+"-> Trying out Syntastic
+Plugin 'vim-syntastic/syntastic'
 
 
 "==> Unsorted Plugins
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 "Plugin 'joestelmach/lint.vim'

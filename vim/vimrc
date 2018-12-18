@@ -68,6 +68,7 @@ set mouse=a
 
 "-> Toggle invisible characters
 nmap <Leader>vi :set list!<cr>
+nmap :Q :quit
 
 "-> Take better chars for those invisible characters
 set listchars=tab:▸\ ,eol:¬,space:∙,nbsp:◦
@@ -80,7 +81,8 @@ set listchars=tab:▸\ ,eol:¬,space:∙,nbsp:◦
 set wildmenu
 
 "-> Keep the undo tree between sessions
-set undofile
+"set undofile
+"--> I really can't deal with all those extra files tho :(
 
 
 
@@ -222,7 +224,7 @@ cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
 nmap <Leader>E :e %%
 
 "-> CtrlP ignores
-let g:ctrlp_custom_ignore = 'node_modules\DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|_build'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:10'
 
 
@@ -346,6 +348,17 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+
+
+"-> Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 
 "---- Auto Commands
