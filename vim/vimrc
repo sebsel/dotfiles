@@ -374,7 +374,11 @@ augroup autosourcing
     autocmd BufWritePost .vimrc source %
 augroup END
 
+"==> Resize buffers when window is resized (by tmux)
+autocmd VimResized * :wincmd =
 
+"==> Exit help-files with just q
+autocmd Filetype help nmap <buffer> q :q<cr>
 
 "==> Merge your tab into the previous window as a split
 function! MergeTabs()
