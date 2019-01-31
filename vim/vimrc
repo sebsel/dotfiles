@@ -202,6 +202,9 @@ set splitright
 
 set path+=**
 
+"==> Make gf also do import statements
+set suffixesadd=.vue,.js,.ts,.rb
+
 
 "==> Make it easy to edit config
 nmap <Leader>cv :e $MYVIMRC<cr>
