@@ -8,6 +8,8 @@
 " 3. Mappings
 " 4. Plugins
 
+let mapleader = "\<Space>"
+
 "==> But first, let me load the plugins
 so ~/.vim/plugins.vim
 
