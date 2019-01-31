@@ -8,7 +8,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
-
 "==> Obligatory tpope plugins
 
 "-> Use - for fast file browsing and more
@@ -27,7 +26,6 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-unimpaired'
 
 
-
 "==> Integrations
 
 "-> Use Git from within Vim
@@ -37,6 +35,8 @@ Plugin 'tpope/vim-fugitive'
 "   and tmux splits. (It is magic but feels so natural.)
 Plugin 'christoomey/vim-tmux-navigator'
 
+"-> Run commands in a tmux pane
+Plugin 'christoomey/vim-tmux-runner'
 
 
 "==> Files and navigations
@@ -50,54 +50,27 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 
-"==> Writing human readable text
-
-"-> Makes the window less broad. I want lines of 80 chars, but no linebreaks
-Plugin 'junegunn/goyo.vim'
-
-
 "==> Search and replace
 
 "-> Search fast
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 
-
-"==> Time traveling
-
-"-> Traversing the undo-tree in graphical manner
-Plugin 'sjl/gundo.vim'
-
-
 "==> PHP stuff
 
 "-> An up to date PHP syntax highlighter
 Plugin 'StanAngeloff/php.vim'
 
-"-> Import classes and add namespaces easily
-Plugin 'arnaud-lb/vim-php-namespace'
-
 "-> Trying out Syntastic
 Plugin 'vim-syntastic/syntastic'
 
-
 "==> Unsorted Plugins
-"Plugin 'SirVer/ultisnips'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ervandew/supertab'
-"Plugin 'joestelmach/lint.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tobyS/pdv'
-Plugin 'tobyS/vmustache'
 
-"-> 2 dependencies + snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+"-> Elixir syntax highlighting
+Plugin 'slashmili/alchemist.vim'
 
-"-> Just use `:!php-cs-fixer`?
-Plugin 'stephpy/vim-php-cs-fixer'
 
 "-> End Vundle
 call vundle#end()
