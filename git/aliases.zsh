@@ -6,6 +6,7 @@
 alias gs="git status -bs"
 alias gl="git log"
 alias gcom="git checkout master"
+alias gcod="git checkout develop"
 alias gaa="git add ."
 alias gc="EDITOR=vim git commit -v"
 alias gp="git push"
