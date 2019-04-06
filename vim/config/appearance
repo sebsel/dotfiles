@@ -1,0 +1,74 @@
+"==> Syntax highlighting and colors
+
+"==> All the colors
+set t_Co=256
+
+
+"==> Syntax
+syntax enable
+colorscheme afterglow "TODO where did I pull afterglow from?
+
+
+"==> Numbers and relative numbers
+set number
+set relativenumber
+
+
+"==> Mark lines longer than 80 chacaters
+
+"-> This is a snippet that makes the background red. Looks doable.
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v./ 
+
+"-> Vim has functionality for this as well, but be sure to remove the t-flag 
+"   from the formatoptions, or it will break lines for you. (Yuck.) 
+set colorcolumn=80
+set formatoptions=
+
+
+"==> Bells and mouse
+
+"-> Turn off the bell
+set noerrorbells visualbell t_vb=
+
+"-> Knowning all the keybindings is no excuse to turn off mouse support
+set mouse=a
+
+
+"-> Take better chars for those invisible characters
+set listchars=tab:▸\ ,eol:¬,space:∙,nbsp:◦
+
+
+"==> Layout tweaking
+
+"-> remove the background color from the numberbar
+highlight LineNr ctermbg=bg
+
+"-> hide the dashes between vertical splits
+highlight vertsplit ctermbg=bg ctermfg=bg
+
+"-> highlight tab-characters to warn you 
+highlight tab ctermbg=green
+
+"-> Jeffrey Way's left padding hack
+set foldcolumn=1
+highlight foldcolumn ctermbg=bg
+
+"-> Look ahead one line when scrolling down
+set scrolloff=1
+
+
+
+"==> Settings for MVim
+
+"-> Font and breathing room
+set guifont=Fira\ Code:h13
+set linespace=15
+
+"-> Don't use GUI tabs
+set guioptions-=e
+
+"-> No scrollbars all around
+set guioptions-=l guioptions-=L guioptions-=r guioptions-=R
+
+" vim: ft=vim

@@ -1,0 +1,10 @@
+"==> Language Server and async linting
+
+Plug 'w0rp/ale'
+
+"==> Languages
+" elixir -> ~/dotfiles/vim/config/elixir
+" ruby -> ~/dotfiles/vim/config/ruby
+" php -> ~/dotfiles/vim/config/php
+
+" vim: ft=vim

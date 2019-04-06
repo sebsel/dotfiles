@@ -1,0 +1,23 @@
+"==> Integration with tmux
+
+"-> Use Ctrl+H,J,K,L to switch between spits, both Vim splits
+"   and tmux splits. (It is magic but feels so natural.)
+Plug 'christoomey/vim-tmux-navigator'
+
+"-> Run commands in a tmux pane
+Plug 'christoomey/vim-tmux-runner'
+
+nmap <silent> <leader>r :VtrSendCommandToRunner<cr>
+nmap <silent> <leader>tr :VtrFlushCommand<cr>:VtrSendCommandToRunner<cr>
+nmap <leader>t :VtrSendCommandToRunner<space>
+nmap <leader>to :VtrOpenRunner<cr>
+nmap <leader>tk :VtrKillRunner<cr>
+nmap <leader>ta :VtrAttachToPane<cr>
+nmap <leader>tl :VtrSendLinesToRunner<cr>
+vmap <leader>tl :VtrSendLinesToRunner<cr>
+nmap <leader>tf :VtrSendFile<cr>
+nmap <c-f> :VtrFocusRunner<cr>
+" <c-f> overwrites full page down, which is too big of a jump for me anyway
+" and it's counterpart <c-b> for page up is already taken by tmux also.
+
+" vim: ft=vim

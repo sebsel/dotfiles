@@ -1,0 +1,7 @@
+"==> HTML
+
+"-> Emmet, for faster HTML typing
+Plug 'mattn/emmet-vim'
+" Bound to Ctrl-Y + , in insert-mode
+
+" vim: ft=vim

@@ -1,0 +1,21 @@
+"==> Obligatory tpope plugins
+
+"-> Use - for fast file browsing and more
+Plug 'tpope/vim-vinegar'
+
+"-> Adds quick ways to comment stuff out
+Plug 'tpope/vim-commentary'
+
+"-> Change the surrounding quotes and more
+Plug 'tpope/vim-surround'
+
+"-> Use Ctrl+A and Ctrl+X to increment and decrement dates
+Plug 'tpope/vim-speeddating'
+
+"-> Various [ operations I do not wish to miss out on
+Plug 'tpope/vim-unimpaired'
+
+"-> Repeat more things with the . command
+Plug 'tpope/vim-repeat'
+
+" vim: ft=vim

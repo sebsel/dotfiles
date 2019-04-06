@@ -1,0 +1,12 @@
+"==> Elixir 
+
+"-> Language server
+let g:ale_elixir_elixir_ls_release='~/dotfiles/bin/elixir_ls'
+
+"-> Syntax highlighting
+Plug 'elixir-editors/vim-elixir'
+
+"-> Two spaces
+autocmd FileType elixir setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+" vim: ft=vim

@@ -1,0 +1,18 @@
+"==> Commands
+
+filetype plugin indent on
+
+"-> Keep doing these wrong
+command! Q quit
+command! W write
+
+"-> Overwrite Ex mode for executing q macro
+nmap Q @q
+
+"-> lazy commands
+nmap <leader>; :
+
+nmap <leader>so :source %<cr>
+
+
+" vim: ft=vim

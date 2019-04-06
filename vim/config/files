@@ -1,0 +1,36 @@
+"==> File navigation
+
+"-> improved tab completion in the menu
+set wildmenu
+
+"-> This feels way more natural to me
+set splitbelow
+set splitright
+
+
+"==> Set a recursive fuzzy search
+
+set path+=**
+
+"==> Make gf also do import statements
+set suffixesadd=.vue,.js,.ts,.rb
+
+
+"==> Fast swapping between two files
+nnoremap <leader><leader> <c-^>
+
+
+"-> Use %% on the command line to get the directory of the current file
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+nmap <Leader>E :e %%
+
+
+"==> Make it easy to edit config
+nmap <Leader>cv :e $MYVIMRC<cr>
+nmap <Leader>cc :e ~/.vim/config<cr>
+nmap <Leader>cs :e ~/.vim/snippets<cr>
+nmap <Leader>ct :e ~/.tmux.conf<cr>
+nmap <Leader>cz :e ~/.zshrc<cr>
+nmap <Leader>c  :e ~/dotfiles<cr>
+
+" vim: ft=vim

@@ -1,0 +1,6 @@
+"==> Elm
+
+"-> Sytnax hightlighting
+Plug 'elmcast/elm-vim'
+
+" vim: ft=vim

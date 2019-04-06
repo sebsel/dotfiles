@@ -1,0 +1,44 @@
+"==> Searching
+
+"-> Incremental search: search as you type (we have fast computers now)
+set incsearch
+
+"-> I keep forgetting the search is case sensitive, so ignore
+set ignorecase
+
+"-> This makes the search insensitive if you search for lowercase
+"   but sensitive if there's a capital in your search somewhere.
+set smartcase
+
+"-> Looking up tags
+nmap <Leader>f :tag<space>
+
+"-> Make grep work with Ag
+set grepprg=ag
+
+
+"-> Search and replace
+nnoremap <leader>sub :%s///g<left><left>
+vnoremap <leader>sub :s///g<left><left>
+
+
+"==> Ag further integration, thnx Chris Toomey
+Plug 'mileszs/ack.vim'
+
+nmap <leader>se :Ack!<space>
+
+function! s:VisualAck()
+  let temp = @"
+  normal! gvy
+  let escaped_pattern = escape(@", "[]().*")
+  let @" = temp
+  execute "Ack! '" . escaped_pattern . "'"
+endfunction
+
+nnoremap K :Ack! '<C-r><C-w>'<cr>
+vnoremap K :<C-u>call <sid>VisualAck()<cr>
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+
+" vim: ft=vim

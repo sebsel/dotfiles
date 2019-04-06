@@ -1,0 +1,6 @@
+"==> PHP
+
+"-> An up to date PHP syntax highlighter
+Plug 'StanAngeloff/php.vim'
+
+" vim: ft=vim
