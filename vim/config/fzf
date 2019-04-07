@@ -18,8 +18,9 @@ nmap <leader>oL :BLines<cr>
 
 nmap <leader>ot :Tags<cr>
 
-nmap <leader>og :Commits<cr>
-nmap <leader>oG :BCommits<cr>
+nmap <leader>og :GFiles?<cr>
+nmap <leader>oc :Commits<cr>
+nmap <leader>oC :BCommits<cr>
 
 nmap <leader>o; :Commands<cr>
 nmap <leader>o: :Commands<cr>
