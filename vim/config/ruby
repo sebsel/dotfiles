@@ -3,8 +3,16 @@
 "-> two spaces
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
+runtime macros/matchit.vim
+
 "==> Ruby
 Plug 'vim-ruby/vim-ruby'
+
+"==> Bundler
+Plug 'tpope/vim-bundler'
+
+"==> Rake
+Plug 'tpope/vim-rake'
 
 "==> Rails
 Plug 'tpope/vim-rails'
