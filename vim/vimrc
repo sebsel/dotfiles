@@ -19,6 +19,7 @@ function! s:SourceConfigFilesIn(directory)
   endfor
 endfunction
 
+filetype plugin on
 call plug#begin('~/.vim/bundle')
 call s:SourceConfigFilesIn('config')
 call plug#end()

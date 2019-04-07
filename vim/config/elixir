@@ -1,7 +1,7 @@
-"==> Elixir 
+"==> Elixir
 
 "-> Language server
-let g:ale_elixir_elixir_ls_release='~/dotfiles/bin/elixir_ls'
+let g:ale_elixir_elixir_ls_release='/Users/Seb/dotfiles/bin/elixir-ls'
 
 "-> Syntax highlighting
 Plug 'elixir-editors/vim-elixir'
