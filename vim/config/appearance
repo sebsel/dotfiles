@@ -18,10 +18,10 @@ set relativenumber
 
 "-> This is a snippet that makes the background red. Looks doable.
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"match OverLength /\%81v./ 
+"match OverLength /\%81v./
 
-"-> Vim has functionality for this as well, but be sure to remove the t-flag 
-"   from the formatoptions, or it will break lines for you. (Yuck.) 
+"-> Vim has functionality for this as well, but be sure to remove the t-flag
+"   from the formatoptions, or it will break lines for you. (Yuck.)
 set colorcolumn=80
 set formatoptions=
 
@@ -47,7 +47,7 @@ highlight LineNr ctermbg=bg
 "-> hide the dashes between vertical splits
 highlight vertsplit ctermbg=bg ctermfg=bg
 
-"-> highlight tab-characters to warn you 
+"-> highlight tab-characters to warn you
 highlight tab ctermbg=green
 
 "-> Jeffrey Way's left padding hack

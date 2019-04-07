@@ -5,7 +5,7 @@
 "-> keep tabstop equal to softtabstop and shiftwidth
 set tabstop=4 softtabstop=4 shiftwidth=4
 
-"-> use spaces instead of tabs 
+"-> use spaces instead of tabs
 "   <c-v><c-i> in insert mode inserts a tab character if you need it
 set expandtab
 set smarttab
