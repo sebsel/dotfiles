@@ -24,9 +24,12 @@ ln -sf ~/dotfiles/sublime/packages.json \
 ln -sf ~/dotfiles/vim ~/.vim
 ln -sf ~/dotfiles/vim/vimrc ~/.vimrc
 
-# Set up Vim plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+echo "Downloading vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
+    && echo "Success!"
+vim +PlugInstall +qall
+echo ""
 
 
 # === TMUX ===
@@ -38,3 +41,10 @@ ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 
+
+# === Brew ===
+
+echo "Don't forget to run Brew!"
+echo ""
+echo "  $ brew bundle"
+echo ""
