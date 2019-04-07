@@ -1,0 +1,37 @@
+"==> Fuzzy finding
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+let g:fzf_files_options =
+  \ '--reverse ' .
+  \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+
+"-> Like Ctrl+P, but without overwriting <c-p>.
+nmap <leader>p :Files<cr>
+nmap <leader>e :History<cr>
+
+nmap <leader>os :Ag
+
+nmap <leader>ol :Lines<cr>
+nmap <leader>oL :BLines<cr>
+
+nmap <leader>ot :Tags<cr>
+
+nmap <leader>og :Commits<cr>
+nmap <leader>oG :BCommits<cr>
+
+nmap <leader>o; :Commands<cr>
+nmap <leader>o: :Commands<cr>
+
+nmap <leader>oh :History<cr>
+nmap <leader>oh; :History:<cr>
+nmap <leader>oh: :History:<cr>
+nmap <leader>oh/ :History/<cr>
+
+nmap <leader>ow :Windows<cr>
+
+"-> fallback to files
+nmap <leader>o :Files<cr>
+
+" vim: ft=vim
