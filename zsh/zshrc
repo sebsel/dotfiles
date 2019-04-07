@@ -71,6 +71,7 @@ alias :q="exit"
 source $DOTFILES/git/aliases.zsh
 source $DOTFILES/laravel/aliases.zsh
 source $DOTFILES/macos/aliases.zsh
+source $DOTFILES/docker/aliases.zsh
 source $DOTFILES/php/aliases.zsh
 source $DOTFILES/tmux/aliases.zsh
 source $DOTFILES/fzf/fzf.zsh
