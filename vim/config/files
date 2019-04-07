@@ -27,10 +27,12 @@ nmap <Leader>E :e %%
 
 "==> Make it easy to edit config
 nmap <Leader>cv :e $MYVIMRC<cr>
-nmap <Leader>cc :e ~/.vim/config<cr>
 nmap <Leader>cs :e ~/.vim/snippets<cr>
 nmap <Leader>ct :e ~/.tmux.conf<cr>
 nmap <Leader>cz :e ~/.zshrc<cr>
 nmap <Leader>c  :e ~/dotfiles<cr>
+
+"-> I have a lot of vimrc files now, so add fuzzy search
+nmap <leader>cc :Files ~/.vim/config<cr>
 
 " vim: ft=vim
