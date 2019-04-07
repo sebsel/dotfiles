@@ -7,9 +7,7 @@ set nocompatible
 set modelines=1
 set secure
 
-"==> Need to set the leader first
-let mapleader = "\<Space>"
-
+nmap <space> :
 
 "-> Thanks to Chris Toomey
 function! s:SourceConfigFilesIn(directory)
