@@ -42,6 +42,10 @@ ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 
 
+# === FZF ===
+
+ln -sf ~/dotfiles/fzf/fzf.zsh ~/.fzf.zsh
+
 # === Brew ===
 
 echo "Don't forget to run Brew!"

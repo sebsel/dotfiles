@@ -73,6 +73,7 @@ source $DOTFILES/laravel/aliases.zsh
 source $DOTFILES/macos/aliases.zsh
 source $DOTFILES/php/aliases.zsh
 source $DOTFILES/tmux/aliases.zsh
+source $DOTFILES/fzf/fzf.zsh
 
 # Better searching in command mode
 bindkey -M vicmd '?' history-incremental-search-backward
