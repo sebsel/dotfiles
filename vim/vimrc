@@ -1,7 +1,8 @@
-" +-------------------+
-" | Vim Configuration |
-" +-------------------+
+" -------------------
+"  Vim Configuration
+" -------------------
 
+language en_US
 set nocompatible
 set modelines=1
 set secure
