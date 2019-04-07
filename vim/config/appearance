@@ -79,4 +79,9 @@ set guioptions-=e
 "-> No scrollbars all around
 set guioptions-=l guioptions-=L guioptions-=r guioptions-=R
 
+
+"-> Support lines like the one below here
+set modelines=1
+set secure
+
 " vim: ft=vim
