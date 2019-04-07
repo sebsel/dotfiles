@@ -7,6 +7,10 @@ touch ~/.hushlogin
 git config --global core.excludesfile ~/.gitignore_global
 ln -sf ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
+#-> https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
+git config --global init.templatedir '~/dotfiles/git/templates'
+git config --global alias.ctags '!.git/hooks/ctags'
+
 
 # === Sublime ===
 
