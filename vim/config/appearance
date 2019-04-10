@@ -71,7 +71,7 @@ autocmd BufWinLeave * call clearmatches()
 
 "-> Font and breathing room
 set guifont=Fira\ Code:h13
-set linespace=15
+set linespace=8
 
 "-> Don't use GUI tabs
 set guioptions-=e
