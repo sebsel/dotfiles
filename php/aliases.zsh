@@ -1,5 +1,6 @@
 alias p='vendor/bin/phpunit'
 alias pf='vendor/bin/phpunit --filter'
+alias tinker="psysh"
 
 # helperfunction to run phan in a docker container
 phan() {
