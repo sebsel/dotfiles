@@ -6,8 +6,9 @@ filetype plugin indent on
 command! Q quit
 command! W write
 
-"-> Shorter writes
+"-> Shorter writes and quits
 nmap <leader>w :write<cr>
+nmap <leader>q :quit<cr>
 
 "-> Overwrite Ex mode for executing q macro
 nmap Q @q
