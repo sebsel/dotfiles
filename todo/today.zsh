@@ -13,5 +13,7 @@ if [ -n "$*" ]; then
 else
     # else just open Vim on that place.
     vim +"normal gg}0j" $TODAYS_NOTES
+    # note when copying: there is a <backspace> char between } and 0
+    # in my config, vim then goes back to the previous line
 fi
 
