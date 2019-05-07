@@ -1,16 +1,17 @@
-
 NOTES_PATH="$HOME/notes"
 TODAYS_NOTES="$NOTES_PATH/`date +%Y-%m-%d`.txt"
 
 # Create the file if it does not yet exist
 if [ ! -f $TODAYS_NOTES ]; then
-    echo "# `date +'%A %e %B %Y'`" > $TODAYS_NOTES
+    echo "# `date +'%Y-%m-%d'`" > $TODAYS_NOTES
 fi
 
-# If there are notes, add them to today, else just open Vim
+# If there are notes in the arguments of this script...
 if [ -n "$*" ]; then
-    echo "- $*" >> $TODAYS_NOTES
+    # ... add them to the end of the first paragraph and exit,
+    vim +"normal gg}0" +"normal o- $*" +"x" $TODAYS_NOTES
 else
-    vim +"normal G $" $TODAYS_NOTES
+    # else just open Vim on that place.
+    vim +"normal gg}0j" $TODAYS_NOTES
 fi
 
