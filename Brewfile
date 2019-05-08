@@ -59,6 +59,7 @@ cask "alfred"
 cask "caffeine"
 cask "docker"
 cask "firefox"
+cask "iterm2"
 cask "minikube"
 cask "neo4j"
 cask "tableplus"
@@ -69,6 +70,7 @@ cask "qlprettypatch"
 cask "qlstephen"
 cask "vagrant"
 cask "virtualbox"
+cask "font-fira-code"
 mas "1Password", id: 443987910
 mas "Agenda", id: 1287445660
 mas "GarageBand", id: 682658836
