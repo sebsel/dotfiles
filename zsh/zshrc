@@ -89,3 +89,6 @@ bindkey "^[OA" up-line-or-beginning-search
 bindkey "^[OB" down-line-or-beginning-search
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
+
+export PATH="/Users/sebastiaan/.gem/ruby/2.3.0/bin:/Users/sebastiaan/bin:/Users/sebastiaan/dotfiles/bin:/usr/local/bin:/Users/sebastiaan/scripts:vendor/bin:/Users/sebastiaan/.composer/vendor/bin:/Users/sebastiaan/.gem/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/sebastiaan/.fzf/bin"
+eval "$(rbenv init -)"
