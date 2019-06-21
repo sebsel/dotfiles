@@ -1,3 +1,6 @@
+# This feels wrong, but can't get multi-user to work without it.
+ZSH_DISABLE_COMPFIX=true
+
 # === Definitions ===
 
 # Path to oh-my-zsh installation.
