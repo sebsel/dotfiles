@@ -77,6 +77,7 @@ source $DOTFILES/macos/aliases.zsh
 source $DOTFILES/docker/aliases.zsh
 source $DOTFILES/php/aliases.zsh
 source $DOTFILES/tmux/aliases.zsh
+source $DOTFILES/tools/aliases.zsh
 source $DOTFILES/fzf/fzf.zsh
 
 # Better searching in command mode
