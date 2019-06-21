@@ -8,8 +8,7 @@ let g:fzf_files_options =
 let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
 
 "-> Like Ctrl+P, but without overwriting <c-p>.
-nmap <leader>p :Files<cr>
-nmap <leader>e :History<cr>
+nmap <leader>e :Files<cr>
 
 nmap <leader>os :Ag
 
