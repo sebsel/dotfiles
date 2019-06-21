@@ -3,7 +3,7 @@
 "==> The tabs or spaces debate
 
 "-> keep tabstop equal to softtabstop and shiftwidth
-set tabstop=4 softtabstop=4 shiftwidth=4
+set tabstop=2 softtabstop=2 shiftwidth=2
 
 "-> use spaces instead of tabs
 "   <c-v><c-i> in insert mode inserts a tab character if you need it
