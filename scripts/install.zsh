@@ -12,16 +12,6 @@ git config --global init.templatedir '~/dotfiles/git/templates'
 git config --global alias.ctags '!.git/hooks/ctags'
 
 
-# === Sublime ===
-
-ln -sf ~/dotfiles/sublime/preferences.json \
-  ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
-ln -sf ~/dotfiles/sublime/keymap.json \
-  ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap
-ln -sf ~/dotfiles/sublime/packages.json \
-  ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package\ Control.sublime-settings
-
-
 # === VIM ===
 
 # Set up Symlinks
