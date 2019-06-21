@@ -1,0 +1,5 @@
+"==> GraphQL
+
+Plug 'jparise/vim-graphql'
+
+" vim: ft=vim
