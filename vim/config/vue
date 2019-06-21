@@ -1,5 +1,6 @@
 "==> Vue
 
 Plug 'posva/vim-vue'
+Plug 'pangloss/vim-javascript'
 
 " vim: ft=vim
