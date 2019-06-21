@@ -16,7 +16,8 @@ git config --global alias.ctags '!.git/hooks/ctags'
 
 # Set up Symlinks
 ln -sf ~/dotfiles/vim/vimrc ~/.vimrc
-rm ~/.vim && ln -sf ~/dotfiles/vim/ ~/.vim
+rm ~/.vim
+ln -sf ~/dotfiles/vim/ ~/.vim
 
 echo "Downloading vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
