@@ -41,6 +41,12 @@ ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 
 ln -sf ~/dotfiles/fzf/fzf.zsh ~/.fzf.zsh
 
+
+# === iTerm ===
+ln -sf ~/dotfiles/iterm/tmux-profile.json \
+    ~/Library/Application\ Support/iTerm2/DynamicProfiles/tmux-profile.json
+
+
 # === Brew ===
 
 echo "Don't forget to run Brew!"
