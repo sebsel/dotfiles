@@ -18,5 +18,8 @@ nmap <leader>; :
 
 nmap <leader>so :source %<cr>
 
+"-> copy the whole file to system clipboard
+nmap <leader>y gg"+yG
+
 
 " vim: ft=vim
