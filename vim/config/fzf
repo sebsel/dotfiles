@@ -5,7 +5,7 @@ Plug 'junegunn/fzf.vim'
 let g:fzf_files_options =
   \ '--reverse ' .
   \ '--preview "(coderay {} || cat {}) 2> /dev/null | head -'.&lines.'"'
-let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden --ignore-dir .git'
 
 "-> Like Ctrl+P, but without overwriting <c-p>.
 nmap <leader>e :Files<cr>
@@ -25,6 +25,7 @@ nmap <leader>o; :Commands<cr>
 nmap <leader>o: :Commands<cr>
 
 nmap <leader>oh :History<cr>
+nmap <leader>ohh :History<cr>
 nmap <leader>oh; :History:<cr>
 nmap <leader>oh: :History:<cr>
 nmap <leader>oh/ :History/<cr>
