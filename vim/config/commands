@@ -6,20 +6,12 @@ filetype plugin indent on
 command! Q quit
 command! W write
 
-"-> Shorter writes and quits
+"-> Shorter writes
 nmap <leader>w :write<cr>
-nmap <leader>q :quit<cr>
 
 "-> Overwrite Ex mode for executing q macro
 nmap Q @q
 
-"-> lazy commands
-nmap <leader>; :
-
 nmap <leader>so :source %<cr>
-
-"-> copy the whole file to system clipboard
-nmap <leader>y gg"+yG
-
 
 " vim: ft=vim

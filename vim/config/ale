@@ -19,6 +19,7 @@ let g:ale_linters = {
 
 nmap <silent> [r <Plug>(ale_previous_wrap)
 nmap <silent> ]r <Plug>(ale_next_wrap)
+nmap <leader>d :ALEDetail<cr>
 
 " From Chris Toomey. Only lint when stopped typing for a second.
 set updatetime=1000
@@ -26,7 +27,7 @@ autocmd CursorHold * :ALELint
 autocmd CursorHoldI * :ALELint
 autocmd InsertLeave * :ALELint
 autocmd TextChanged * :ALELint
-let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_text_changed = 'never'
 
 
 " vim: ft=vim

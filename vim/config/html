@@ -3,5 +3,6 @@
 "-> Emmet, for faster HTML typing
 Plug 'mattn/emmet-vim'
 " Bound to Ctrl-Y + , in insert-mode
+Plug 'cakebaker/scss-syntax.vim'
 
 " vim: ft=vim
