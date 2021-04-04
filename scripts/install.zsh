@@ -41,10 +41,10 @@ ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
 
 ln -sf ~/dotfiles/fzf/fzf.zsh ~/.fzf.zsh
 
-# === Alacritty ===
+# === .config  ===
 
-ln -sf ~/dotfiles/alacritty/alacritty.yml ~/.alacritty.yml
-
+ln -sf ~/dotfiles/alacritty ~/.config/alacritty
+ln -sf ~/dotfiles/karabiner ~/.config/karabiner
 
 # === iTerm ===
 ln -sf ~/dotfiles/iterm/tmux-profile.json \
