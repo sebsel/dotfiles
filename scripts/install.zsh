@@ -5,7 +5,7 @@ touch ~/.hushlogin
 
 # === Git ===
 git config --global core.excludesfile ~/.gitignore_global
-ln -sf ~/dotfiles/git/gitignore_global ~/.gitignore_global
+ln -sfh ~/dotfiles/git/gitignore_global ~/.gitignore_global
 
 #-> https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 git config --global init.templatedir '~/dotfiles/git/templates'
@@ -15,39 +15,31 @@ git config --global alias.ctags '!.git/hooks/ctags'
 # === VIM ===
 
 # Set up Symlinks
-ln -sf ~/dotfiles/vim/vimrc ~/.vimrc
-rm ~/.vim
-ln -sf ~/dotfiles/vim/ ~/.vim
+ln -sfh ~/dotfiles/vim/vimrc ~/.vimrc
+ln -sfh ~/dotfiles/vim/ ~/.vim
 
-echo "Downloading vim-plug"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
-    && echo "Success!"
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+  echo "Downloading vim-plug"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
+      && echo "Success!"
+fi
 vim +PlugInstall +qall
-echo ""
 
 
-# === TMUX ===
+# === ~/.foo ===
 
-ln -sf ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -sfh ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -sfh ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -sfh ~/dotfiles/fzf/fzf.zsh ~/.fzf.zsh
 
+# === ~/.config/foo  ===
 
-# === ZSH ===
-
-ln -sf ~/dotfiles/zsh/zshrc ~/.zshrc
-
-
-# === FZF ===
-
-ln -sf ~/dotfiles/fzf/fzf.zsh ~/.fzf.zsh
-
-# === .config  ===
-
-ln -sf ~/dotfiles/alacritty ~/.config/alacritty
-ln -sf ~/dotfiles/karabiner ~/.config/karabiner
+ln -sfh ~/dotfiles/alacritty/ ~/.config/alacritty
+ln -sfh ~/dotfiles/karabiner/ ~/.config/karabiner
 
 # === iTerm ===
-ln -sf ~/dotfiles/iterm/tmux-profile.json \
+ln -sfh ~/dotfiles/iterm/tmux-profile.json \
     ~/Library/Application\ Support/iTerm2/DynamicProfiles/tmux-profile.json
 
 
