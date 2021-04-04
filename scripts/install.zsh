@@ -38,6 +38,7 @@ ln -sfh ~/dotfiles/hammerspoon/ ~/.hammerspoon
 
 ln -sfh ~/dotfiles/alacritty/ ~/.config/alacritty
 ln -sfh ~/dotfiles/karabiner/ ~/.config/karabiner
+ln -sfh ~/dotfiles/yabai/ ~/.config/yabai
 
 # === iTerm ===
 ln -sfh ~/dotfiles/iterm/tmux-profile.json \
