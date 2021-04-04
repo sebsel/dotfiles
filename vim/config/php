@@ -3,7 +3,6 @@
 "-> An up to date PHP syntax highlighter
 Plug 'StanAngeloff/php.vim'
 
-
 "-> Sorting namespaces
 nmap <Leader>ps mpgg/namespace<cr>2jvip:sort<cr>`p
 

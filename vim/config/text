@@ -1,6 +1,7 @@
 "==> Text writing and Markdown
 
 Plug 'plasticboy/vim-markdown'
+Plug 'cespare/vim-toml'
 
 "-> Vim Markdown
 let g:vim_markdown_folding_disabled = 1

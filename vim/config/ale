@@ -23,6 +23,8 @@ nmap <silent> [r <Plug>(ale_previous_wrap)
 nmap <silent> ]r <Plug>(ale_next_wrap)
 nmap <leader>d :ALEDetail<cr>
 
+let g:ale_fix_on_save = 1
+
 " From Chris Toomey. Only lint when stopped typing for a second.
 set updatetime=1000
 autocmd CursorHold * :ALELint
