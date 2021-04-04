@@ -17,6 +17,13 @@ spoon.WindowHalfsAndThirds:bindHotkeys({
   smaller     = { hyper, "M" },
 })
 
+-- Window Screen
+hs.loadSpoon("WindowScreenLeftAndRight")
+spoon.WindowScreenLeftAndRight:bindHotkeys({
+  screen_left = { hyper, "1" },
+  screen_right= { hyper, "2" },
+})
+
 -- Terminal
 hs.application.enableSpotlightForNameSearches(true)
 terminalOpen = true
