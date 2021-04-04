@@ -12,6 +12,8 @@ nmap <leader>f :ALEFix<cr>
 let g:ale_fixers = {
 \  'js' : ['eslint'],
 \  'vue' : ['eslint', 'stylelint'],
+\  'rust' : ['rustfmt'],
+\  'elixir': ['mix_format']
 \}
 let g:ale_linters = {
  \  'vue': ['eslint', 'stylelint']
