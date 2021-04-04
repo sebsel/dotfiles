@@ -17,7 +17,7 @@ alias gdc="git diff --cached"
 alias nah="git reset --hard && git clean -df"
 alias wip="git add . && git commit -m \"wip\""
 alias git-hash="git rev-parse --short HEAD"
-alias git-init="git init && gaa && git commit -q"
+alias git-init="git init -b main && gaa && git commit -q"
 
 #=== Git Tower ===
 alias tower="gittower"
