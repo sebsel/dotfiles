@@ -29,7 +29,7 @@ hs.application.enableSpotlightForNameSearches(true)
 terminalOpen = true
 hs.hotkey.bind({"cmd"}, "Escape", function()
   hs.application.launchOrFocus(terminal)
-  app = hs.application.find(terminal)
+  local app = hs.application.find(terminal)
   if terminalOpen then
     terminalOpen = false
     app:unhide()
@@ -37,4 +37,9 @@ hs.hotkey.bind({"cmd"}, "Escape", function()
     terminalOpen = true
     app:hide()
   end
+end)
+
+-- Experimentation
+hs.hotkey.bind(hyper, "R", function()
+  hs.reload()
 end)
