@@ -2,7 +2,7 @@
 terminal = 'Alacritty'
 
 -- Keys
-hyper = {"ctrl", "alt", "cmd"}
+hyper = {"ctrl", "alt", "cmd", "shift"}
 
 -- Window Halfs and Thirds
 hs.loadSpoon("WindowHalfsAndThirds")
