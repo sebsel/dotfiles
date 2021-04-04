@@ -32,6 +32,7 @@ vim +PlugInstall +qall
 ln -sfh ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sfh ~/dotfiles/zsh/zshrc ~/.zshrc
 ln -sfh ~/dotfiles/fzf/fzf.zsh ~/.fzf.zsh
+ln -sfh ~/dotfiles/hammerspoon/ ~/.hammerspoon
 
 # === ~/.config/foo  ===
 
