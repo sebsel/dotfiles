@@ -4,6 +4,7 @@ browser  = "FireFox"
 git      = "Fork"
 notes    = "Obsidian"
 chat     = "Slack"
+music    = "Music"
 empty    = "Finder"
 
 -- Keys
@@ -43,7 +44,7 @@ hs.hotkey.bind(hyper, "6", function() hs.application.launchOrFocus(empty) end)
 hs.hotkey.bind(hyper, "7", function() hs.application.launchOrFocus(empty) end)
 hs.hotkey.bind(hyper, "8", function() hs.application.launchOrFocus(empty) end)
 hs.hotkey.bind(hyper, "9", function() hs.application.launchOrFocus(chat) end)
-hs.hotkey.bind(hyper, "0", function() hs.application.launchOrFocus(empty) end)
+hs.hotkey.bind(hyper, "0", function() hs.application.launchOrFocus(music) end)
 
 -- Terminal
 hs.application.enableSpotlightForNameSearches(true)
