@@ -48,16 +48,17 @@ hs.hotkey.bind(hyper, "0", function() hs.application.launchOrFocus(music) end)
 
 -- Terminal
 hs.application.enableSpotlightForNameSearches(true)
-terminalOpen = true
+terminalHidden = false
 hs.hotkey.bind({"cmd"}, "Escape", function()
-  hs.application.launchOrFocus(terminal)
   local app = hs.application.find(terminal)
-  if terminalOpen then
-    terminalOpen = false
-    app:unhide()
-  else
-    terminalOpen = true
+  local hasFocus = app and app:isFrontmost()
+  hs.application.launchOrFocus(terminal)
+  if hasFocus and not TerminalHidden then
+    terminalHidden = true
     app:hide()
+  else
+    terminalHidden = false
+    app:unhide()
   end
 end)
 
