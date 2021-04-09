@@ -64,6 +64,7 @@ end)
 -- Experimentation
 hs.hotkey.bind(hyper, "R", function()
   hs.reload()
+  hs.notify.new({title='Config reloaded'}):send()
 end)
 
 -- Full Screen with padding
