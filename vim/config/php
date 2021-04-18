@@ -13,4 +13,7 @@ nmap <Leader>pn :Files vendor/laravel/nova/src<cr>
 "-> only do missing classes and undefined vars
 let g:ale_php_phpstan_level = '0'
 
+"-> autocmd settings
+autocmd FileType php setlocal commentstring=#\ %s
+
 " vim: ft=vim
