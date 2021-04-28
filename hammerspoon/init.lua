@@ -1,11 +1,13 @@
 -- apps
 terminal = "Alacritty"
 browser  = "FireFox"
+chrome   = "Chrome"
 git      = "Fork"
 notes    = "Obsidian"
 chat     = "Slack"
 music    = "Music"
-empty    = "Finder"
+finder   = "Finder"
+writer   = "iA Writer"
 
 -- Keys
 hyper = {"ctrl", "alt", "cmd", "shift"}
@@ -54,14 +56,14 @@ function toggleApp(appName)
 end
 
 hs.hotkey.bind({"cmd"}, "Escape", toggleApp(terminal))
-hs.hotkey.bind(hyper, "1", toggleApp(terminal))
-hs.hotkey.bind(hyper, "2", toggleApp(browser))
-hs.hotkey.bind(hyper, "3", toggleApp(git))
+hs.hotkey.bind(hyper, "1", toggleApp(chrome))
+hs.hotkey.bind(hyper, "2", toggleApp(git))
+hs.hotkey.bind(hyper, "3", toggleApp(browser))
 hs.hotkey.bind(hyper, "4", toggleApp(notes))
-hs.hotkey.bind(hyper, "5", toggleApp(empty))
-hs.hotkey.bind(hyper, "6", toggleApp(empty))
-hs.hotkey.bind(hyper, "7", toggleApp(empty))
-hs.hotkey.bind(hyper, "8", toggleApp(empty))
+hs.hotkey.bind(hyper, "5", toggleApp(writer))
+hs.hotkey.bind(hyper, "6", toggleApp(finder))
+hs.hotkey.bind(hyper, "7", function() end)
+hs.hotkey.bind(hyper, "8", function() end)
 hs.hotkey.bind(hyper, "9", toggleApp(chat))
 hs.hotkey.bind(hyper, "0", toggleApp(music))
 
