@@ -1,0 +1,20 @@
+"==> Minimalist snippets
+
+" Make the leader by itself not eat characters
+nnoremap <leader>s :read $HOME/dotfiles/vim/snippets/
+
+" New PHP class
+nnoremap <leader>spp :read $HOME/dotfiles/vim/snippets/php-class<cr>
+            \kdd
+            \2jt;ciw<c-r>=expand('%:h')<cr><esc>
+            \0w~:s/\//\\/g<cr>
+            \2j0wciw<c-r>=expand('%:t:r')<cr><esc>
+            \2j^S
+
+" New PHP method
+nnoremap <leader>sfn :read $HOME/dotfiles/vim/snippets/php-function<cr>
+            \=4=^2wciw
+nnoremap <leader>spfn :read $HOME/dotfiles/vim/snippets/php-function<cr>
+            \=4=^ciwprotected<esc>2wciw
+
+" vim: ft=vim
