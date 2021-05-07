@@ -4,12 +4,11 @@
 nnoremap <leader>s :read $HOME/dotfiles/vim/snippets/
 
 " New PHP class
-nnoremap <leader>spp :read $HOME/dotfiles/vim/snippets/php-class<cr>
-            \kdd
-            \2jt;ciw<c-r>=expand('%:h')<cr><esc>
-            \0w~:s/\//\\/g<cr>
-            \2j0wciw<c-r>=expand('%:t:r')<cr><esc>
-            \2j^S
+nnoremap <leader>spp i<?php<cr><cr>
+            \namespace <c-r>=expand('%:h')<cr><esc>
+            \0wgUl:s/\//\\/g<cr><esc>A;<cr><cr>
+            \class <c-r>=expand('%:t:r')<cr>
+            \<cr>{<cr>}<esc>O
 
 " New PHP method
 nnoremap <leader>sfn :read $HOME/dotfiles/vim/snippets/php-function<cr>
