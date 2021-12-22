@@ -9,6 +9,7 @@ nmap <Leader>ps mpgg/namespace<cr>2jvip:sort<cr>`p
 "-> Source diving
 nmap <Leader>pl :Files vendor/laravel/framework/src<cr>
 nmap <Leader>pn :Files vendor/laravel/nova/src<cr>
+nmap <Leader>pv :Files vendor<cr>
 
 "-> Finding ray() statements
 nmap <Leader>pr :grep "\bray\("<cr><cr><cr>
