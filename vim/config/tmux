@@ -12,7 +12,7 @@ tnoremap <silent> <c-\> <c-w>:TmuxNavigatePrevious<cr>
 "-> Run commands in a tmux pane
 Plug 'christoomey/vim-tmux-runner'
 
-nmap <silent> <leader>r :w<cr>:VtrSendCommandToRunner<cr>
+nmap <silent> <leader>r :wa<cr>:VtrSendCommandToRunner<cr>
 nmap <silent> <leader>tr :VtrFlushCommand<cr>:VtrSendCommandToRunner<cr>
 nmap <leader>t :VtrSendCommandToRunner<space>
 nmap <leader>to :VtrOpenRunner<cr>
