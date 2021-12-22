@@ -12,7 +12,7 @@ tnoremap <silent> <c-\> <c-w>:TmuxNavigatePrevious<cr>
 "-> Run commands in a tmux pane
 Plug 'christoomey/vim-tmux-runner'
 
-nmap <silent> <leader>r :VtrSendCommandToRunner<cr>
+nmap <silent> <leader>r :w<cr>:VtrSendCommandToRunner<cr>
 nmap <silent> <leader>tr :VtrFlushCommand<cr>:VtrSendCommandToRunner<cr>
 nmap <leader>t :VtrSendCommandToRunner<space>
 nmap <leader>to :VtrOpenRunner<cr>
@@ -21,6 +21,9 @@ nmap <leader>ta :VtrAttachToPane<cr>
 nmap <leader>tl :VtrSendLinesToRunner<cr>
 vmap <leader>tl :VtrSendLinesToRunner<cr>
 nmap <leader>tf :VtrSendFile<cr>
+nmap <leader>tc :VtrSendCtrlC<cr>
+nmap <leader>td :VtrSendCtrlD<cr>
+nmap <leader>tx :VtrSendCtrlC<cr>:VtrSendCommandToRunner<cr>
 nmap <c-f> :VtrFocusRunner<cr>
 " <c-f> overwrites full page down, which is too big of a jump for me anyway
 " and it's counterpart <c-b> for page up is already taken by tmux also.
