@@ -21,9 +21,13 @@ let g:ale_linters = {
 
 nmap <silent> [r <Plug>(ale_previous_wrap)
 nmap <silent> ]r <Plug>(ale_next_wrap)
-nmap <leader>d :ALEDetail<cr>
+nmap <leader>ad :ALEDetail<cr>
+nmap <leader>ah :ALEHover<cr>
+nmap <leader>af :ALEFindReferences<cr>
 
 let g:ale_fix_on_save = 1
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
 " From Chris Toomey. Only lint when stopped typing for a second.
 set updatetime=1000
