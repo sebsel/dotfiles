@@ -22,7 +22,7 @@ nnoremap <leader><leader> <c-^>
 
 "-> Use %% on the command line to get the directory of the current file
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
-nmap <Leader>E :e %%
+nmap <Leader>E :Files %%<cr>
 
 
 "==> Make it easy to edit config
