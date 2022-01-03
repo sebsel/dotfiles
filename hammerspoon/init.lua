@@ -12,19 +12,6 @@ writer   = "iA Writer"
 -- Keys
 hyper = {"ctrl", "alt", "cmd", "shift"}
 
--- Window Halfs and Thirds
-hs.loadSpoon("WindowHalfsAndThirds")
-spoon.WindowHalfsAndThirds:bindHotkeys({
-  left_half   = { hyper, "N" },
-  right_half  = { hyper, "M" },
-  third_left  = { hyper, "I" },
-  third_right = { hyper, "O" },
-  max_toggle  = { hyper, "'" },
-  undo        = { hyper, "U" },
-  larger      = { hyper, "=" },
-  smaller     = { hyper, "-" },
-})
-
 -- Window Screen
 hs.loadSpoon("WindowScreenLeftAndRight")
 spoon.WindowScreenLeftAndRight:bindHotkeys({
