@@ -67,6 +67,19 @@ hs.hotkey.bind(hyper, "8", function() end)
 hs.hotkey.bind(hyper, "9", toggleApp(chat))
 hs.hotkey.bind(hyper, "0", toggleApp(music))
 
+-- Desk
+function deskMove(to)
+  return function()
+    hs.osascript.applescript([[
+      tell application "Desk Controller"
+        move "]] .. to .. [["
+      end tell
+    ]])
+  end
+end
+hs.hotkey.bind(hyper, "-", deskMove("to-sit"))
+hs.hotkey.bind(hyper, "=", deskMove("to-stand"))
+
 -- Experimentation
 hs.hotkey.bind(hyper, "R", function()
   hs.reload()
