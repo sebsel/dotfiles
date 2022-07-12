@@ -12,8 +12,7 @@ if (exists("php_xml_heredoc") && php_xml_heredoc)
   syn region phpHereDoc matchgroup=Delimiter start="\(<<<\)\@3<=\z(\(\I\i*\)\=\(xml\)\c\(\i*\)\)$" end="^\s*\z1\>" contained contains=@xmlTop,phpIdentifier,phpIdentifierSimply,phpIdentifierComplex,phpSpecialChar,phpMethodsVar,phpStrEsc keepend extend
 endif
 
-syn keyword phpKeyword fn
-syn keyword phpKeyword mixed
-syn keyword phpKeyword match
+syn keyword phpFunctions str_starts_with str_ends_with str_contains contained
+syn keyword phpKeyword fn mixed match never enum readonly contained
 syn match phpParent /\$this/
 syn keyword phpParent self
