@@ -22,7 +22,7 @@ set relativenumber
 
 "-> Vim has functionality for this as well, but be sure to remove the t-flag
 "   from the formatoptions, or it will break lines for you. (Yuck.)
-set colorcolumn=80
+set colorcolumn=80,120
 set formatoptions=
 
 
