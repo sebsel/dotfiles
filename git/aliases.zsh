@@ -5,7 +5,7 @@
 
 alias gs="git status -bs"
 alias gl="git log"
-alias gcom="git checkout master"
+alias gcom="git checkout main"
 alias gcod="git checkout develop"
 alias gcor="git checkout release"
 alias gcof="git checkout \$(git branch --format \"%(refname:short)\" | fzf)"
