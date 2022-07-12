@@ -7,7 +7,7 @@ command! Q quit
 command! W write
 
 "-> Shorter writes
-nmap <leader>w :write<cr>
+nmap <leader>w :wall<cr>
 
 "-> Overwrite Ex mode for executing q macro
 nmap Q @q
