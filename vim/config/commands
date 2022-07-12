@@ -18,6 +18,12 @@ nmap <leader>so :source %<cr>
 nmap gy "+y
 vmap gy "+y
 
+"-> go to next capital letter
+nmap gl /\u<cr>
+omap gl /\u<cr>
+nmap gL ?\u<cr>
+omap gL ?\u<cr>
+
 autocmd VimResized * :wincmd =
 
 " vim: ft=vim
