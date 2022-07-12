@@ -20,7 +20,8 @@ nmap <leader>tk :VtrKillRunner<cr>
 nmap <leader>ta :VtrAttachToPane<cr>
 nmap <leader>tl :VtrSendLinesToRunner<cr>
 vmap <leader>tl :VtrSendLinesToRunner<cr>
-nmap <leader>tf :VtrSendFile<cr>
+nmap <leader>tf :VtrSendCommandToRunner<space>pf<space>
+nmap <leader>tp :VtrSendCommandToRunner<space>p<cr>
 nmap <leader>tc :VtrSendCtrlC<cr>
 nmap <leader>td :VtrSendCtrlD<cr>
 nmap <leader>tx :VtrSendCtrlC<cr>:VtrSendCommandToRunner<cr>
