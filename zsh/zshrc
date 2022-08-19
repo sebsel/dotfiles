@@ -43,7 +43,7 @@ source $DOTFILES/zsh/prompt.zsh
 export LSCOLORS='Axfxcxdxbxegedabagacad'
 
 # Preferred editor
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
