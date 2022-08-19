@@ -12,7 +12,7 @@ nmap <Leader>pn :Files vendor/laravel/nova/src<cr>
 nmap <Leader>pv :Files vendor<cr>
 
 "-> Finding ray() statements
-nmap <Leader>pr :grep "\bray\("<cr><cr><cr>
+nmap <Leader>pr :silent grep "\bray\("<cr>
 
 "-> only do missing classes and undefined vars
 let g:ale_php_phpstan_level = '0'
