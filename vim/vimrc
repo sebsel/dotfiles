@@ -7,7 +7,8 @@ set encoding=utf-8
 set nocompatible
 set hidden
 
-nmap <space> :
+" leader: space or \
+nmap <space> \
 
 "-> Thanks to Chris Toomey
 function! s:SourceConfigFilesIn(directory)

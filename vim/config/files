@@ -18,6 +18,7 @@ set suffixesadd=.vue,.js,.ts,.rb
 
 "==> Fast swapping between two files
 nnoremap <leader><leader> <c-^>
+nnoremap <leader><space> <c-^>
 
 
 "-> Use %% on the command line to get the directory of the current file
