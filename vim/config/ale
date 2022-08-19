@@ -24,6 +24,7 @@ nmap <silent> ]r <Plug>(ale_next_wrap)
 nmap <leader>ad :ALEDetail<cr>
 nmap <leader>ah :ALEHover<cr>
 nmap <leader>af :ALEFindReferences<cr>
+nmap <leader>ai :ALEInfo<cr>
 
 let g:ale_fix_on_save = 1
 let g:ale_floating_preview = 1
