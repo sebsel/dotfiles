@@ -14,6 +14,9 @@ nmap <Leader>pv :Files vendor<cr>
 "-> Finding ray() statements
 nmap <Leader>pr :silent grep "\bray\("<cr>
 
+"-> Getting to the docs faster: look up word under cursor on PHP.net
+nmap <Leader>pd :silent !open https://php.net/<c-r><c-w><cr>
+
 "-> only do missing classes and undefined vars
 let g:ale_php_phpstan_level = '0'
 
