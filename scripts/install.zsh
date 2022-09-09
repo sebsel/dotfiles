@@ -4,12 +4,10 @@
 touch ~/.hushlogin
 
 # === Git ===
-git config --global core.excludesfile ~/.gitignore_global
-ln -sfh ~/dotfiles/git/gitignore_global ~/.gitignore_global
-
+ln -sfh ~/dotfiles/git/gitconfig ~/.gitconfig
 #-> https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
-git config --global init.templatedir '~/dotfiles/git/templates'
-git config --global alias.ctags '!.git/hooks/ctags'
+# git config --global init.templatedir '~/dotfiles/git/templates'
+# git config --global alias.ctags '!.git/hooks/ctags'
 
 
 # === VIM ===
@@ -36,14 +34,13 @@ ln -sfh ~/dotfiles/hammerspoon/ ~/.hammerspoon
 
 # === ~/.config/foo  ===
 
+mkdir -p ~/.config
 ln -sfh ~/dotfiles/alacritty/ ~/.config/alacritty
-ln -sfh ~/dotfiles/karabiner/ ~/.config/karabiner
-ln -sfh ~/dotfiles/yabai/ ~/.config/yabai
+# ln -sfh ~/dotfiles/yabai/ ~/.config/yabai
 
-# === iTerm ===
-ln -sfh ~/dotfiles/iterm/tmux-profile.json \
-    ~/Library/Application\ Support/iTerm2/DynamicProfiles/tmux-profile.json
+# === homescaping ===
 
+mkdir -p ~/code
 
 # === Brew ===
 
