@@ -1,0 +1,56 @@
+[core]
+    excludesfile = ~/dotfiles/git/gitignore_global
+    pager = less -F -X
+[user]
+    name = Sebastiaan Andeweg
+    email = seb@seblog.nl
+[push]
+    default = upstream
+[merge]
+    ff = only
+[init]
+    defaultBranch = main
+[fetch]
+    prune = true
+[alias]
+    # Shorter versions
+    a = add
+    aa = add .
+    b = branch
+    c = commit -v
+    co = checkout
+    com = checkout main
+    cod = checkout develop
+    cor = checkout release
+    cof = "!git checkout $(git branch --format '%(refname:short)' | fzf)"
+    d = diff
+    dc = diff --cached
+    p = push
+    pl = pull
+    s = status -bs
+
+    # Git logs
+    sl = log --oneline --decorate -20
+    sla = log --oneline --decorate --graph --all -20
+    recent = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' -20
+
+    # Convenience
+    resync = !git reset --hard $(git upstream)
+    staged = diff --cached
+    uncommit = reset --soft HEAD^
+    unstage = reset
+    upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+    nah = !git reset --hard && git clean -df
+    wip = !git add . && git commit -m "wip"
+
+    # Updating branches
+    mup = !git checkout main && git pull && git checkout -
+    rup = !git checkout release && git pull && git checkout -
+    dup = !git checkout develop && git pull && git checkout -
+
+    # Get hashes
+    short-hash = rev-parse --short HEAD
+    tree-hash = rev-parse HEAD^{tree}
+    copy-hash = "!git rev-parse HEAD | pbcopy"
+
+# vim: ft=gitconfig

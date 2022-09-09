@@ -1,5 +1,0 @@
-"-> Use Git from within Vim
-
-Plug 'tpope/vim-fugitive'
-
-" vim: ft=vim

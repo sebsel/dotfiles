@@ -1,0 +1,10 @@
+"-> Use Git from within Vim
+
+Plug 'tpope/vim-fugitive'
+
+cnoreabbrev Gb Git blame
+cnoreabbrev Gbl Git blame
+
+Plug 'tpope/vim-rhubarb'
+
+" vim: ft=vim
