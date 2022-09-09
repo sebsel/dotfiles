@@ -18,24 +18,15 @@ set grepprg=ag
 nnoremap <leader>sub :%s///g<left><left>
 vnoremap <leader>sub :s///g<left><left>
 
-
-"==> Ag further integration, thnx Chris Toomey
-Plug 'mileszs/ack.vim'
-
-nmap <leader>se :Ack!<space>
-
-function! s:VisualAck()
+function! s:VisualGrep()
   let temp = @"
   normal! gvy
   let escaped_pattern = escape(@", "[]().*")
   let @" = temp
-  execute "Ack! '" . escaped_pattern . "'"
+  execute "grep '" . escaped_pattern . "'"
 endfunction
 
-nnoremap K :Ack! '<C-r><C-w>'<cr>
-vnoremap K :<C-u>call <sid>VisualAck()<cr>
-
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
+nnoremap K :grep '<C-r><C-w>'<cr>
+vnoremap K :<C-u>call <sid>VisualGrep()<cr>
 
 " vim: ft=vim
