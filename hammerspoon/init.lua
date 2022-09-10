@@ -26,6 +26,7 @@ hs.hotkey.bind(hyper, "K", function() hs.window.filter.focusNorth() end)
 hs.hotkey.bind(hyper, "L", function() hs.window.filter.focusEast() end)
 
 -- Toggle applications
+hs.application.enableSpotlightForNameSearches(true)
 function toggleApp(appName)
   appHidden = false
   return function()
@@ -42,7 +43,7 @@ function toggleApp(appName)
   end
 end
 
-hs.hotkey.bind({"cmd"}, "Escape", toggleApp(terminal))
+-- hs.hotkey.bind({"cmd"}, "Escape", toggleApp(terminal))
 hs.hotkey.bind(hyper, "1", toggleApp(chrome))
 hs.hotkey.bind(hyper, "2", toggleApp(git))
 hs.hotkey.bind(hyper, "3", toggleApp(browser))
