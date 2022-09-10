@@ -31,6 +31,8 @@ nmap <leader>ohh :History<cr>
 nmap <leader>oh; :History:<cr>
 nmap <leader>oh: :History:<cr>
 nmap <leader>oh/ :History/<cr>
+nmap <leader>; :History:<cr>
+nmap <leader>/ :History/<cr>
 
 nmap <leader>ow :Windows<cr>
 
