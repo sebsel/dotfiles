@@ -6,7 +6,7 @@ alias lss="tmux ls"
 
 # https://github.com/szymonkaliski/dotfiles/blob/ad449834cedf28d026bbab0c57413d049c7dc45d/Dotfiles/zshrc#L605-L621
 # but changed to work with windows instead of panes
-function ftwindow() {
+function twin() {
   local sessions target
 
   sessions=$(tmux list-sessions -F '#S;#W;#{window_panes};#{pane_current_path}')
@@ -22,7 +22,7 @@ function ftwindow() {
 }
 
 # Project Switcher, based on the above, but looking at folders
-function ftproject() {
+function tpro() {
   local projects session session_name session_folder
 
   projects=$(
