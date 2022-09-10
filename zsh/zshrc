@@ -28,7 +28,7 @@ export PATH="$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH"
 # === ZSH ===
 
 # Plugins
-plugins=(git osx laravel5 vi-mode)
+plugins=(laravel5 vi-mode)
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -90,5 +90,8 @@ bindkey "^[OB" down-line-or-beginning-search
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 
-export PATH="/Users/sebastiaan/.gem/ruby/2.3.0/bin:/Users/sebastiaan/bin:/Users/sebastiaan/dotfiles/bin:/usr/local/bin:/Users/sebastiaan/scripts:vendor/bin:/Users/sebastiaan/.composer/vendor/bin:/Users/sebastiaan/.gem/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/sebastiaan/.fzf/bin"
-eval "$(rbenv init -)"
+
+# NVM node version manager
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
