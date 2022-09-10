@@ -1,14 +1,13 @@
-alias p='vendor/bin/phpunit'
-alias pf='vendor/bin/phpunit --filter'
+alias art="php artisan"
 alias tinker="psysh"
 
-# helperfunction to run phan in a docker container
-phan() {
-    docker run -v $PWD:/mnt/src --rm \
-        -u "$(id -u):$(id -g)" cloudflare/phan:latest $@
-    return $?
+alias p='([ -f vendor/bin/pest ] && vendor/bin/pest) || ([ -f vendor/bin/phpunit ] && vendor/bin/phpunit) || echo "No tests found"'
+function pf {
+  ([ -f vendor/bin/pest ] && vendor/bin/pest --filter $@ ) \
+  || ([ -f vendor/bin/phpunit ] && vendor/bin/phpunit --filter $@ ) \
+  || echo "No tests found"
 }
-    
+
 # easily switch php-versions with brew
 swphp() {
     current_php=$(ls -l `which php` | grep -o 'php@\d\.\d' || echo 'php')
