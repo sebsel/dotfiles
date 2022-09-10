@@ -5,6 +5,9 @@ Plug 'tpope/vim-fugitive'
 cnoreabbrev Gb Git blame
 cnoreabbrev Gbl Git blame
 
+" -> I have gy as "+y, make it work with the y<c-G> mapping
+nmap <silent> gy<C-G> :<C-U>call setreg('+', fugitive#Object(@%))<CR>
+
 Plug 'tpope/vim-rhubarb'
 
 " vim: ft=vim
