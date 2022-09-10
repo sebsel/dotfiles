@@ -7,7 +7,7 @@
 [push]
     default = upstream
 [merge]
-    ff = only
+    ff = false
 [init]
     defaultBranch = main
 [fetch]
@@ -40,6 +40,7 @@
     uncommit = reset --soft HEAD^
     unstage = reset
     upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+    ff = merge --ff-only
     nah = !git reset --hard && git clean -df
     wip = !git add . && git commit -m "wip"
 
