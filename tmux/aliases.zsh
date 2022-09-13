@@ -36,7 +36,7 @@ function tpro() {
     done; echo "dotfiles,../dotfiles"
   )
 
-  session=$(echo "$projects" | xsv table | fzf --select-1 --exit-0 --prompt="tmux > ")
+  session=$(echo "$projects" | xsv table | fzf --select-1 --exit-0 --prompt="tmux > ") || return
   session_name=$(echo $session | awk '{ print $1 }')
   session_folder=$(echo $session | awk "{ print \"$HOME/code/\" \$2 }")
 
