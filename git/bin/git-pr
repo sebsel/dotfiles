@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+local url
+url=$(git remote get-url $(git remote))
+url=$(echo $url | sed 's/.*github\.com[:\/]\(.*\).git$/https:\/\/github.com\/\1\/compare/')
+
+open -u "$url/$(git symbolic-ref --short HEAD)"
+
+#vim: syn=zsh

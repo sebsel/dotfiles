@@ -21,6 +21,9 @@ export PATH="vendor/bin:$HOME/.composer/vendor/bin:$PATH"
 # I have some private scripts hidden too
 export PATH="$HOME/scripts:$PATH"
 
+# Custom Git commands that require files
+export PATH="$DOTFILES/git/bin:$PATH"
+
 # But start with ~/bin, dotfiles and Homebrew
 export PATH="$HOME/bin:$DOTFILES/bin:/usr/local/bin:$PATH"
 

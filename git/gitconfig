@@ -46,6 +46,7 @@
     wip = !git add . && git commit -m "wip"
     fadd = !git add $(git ls-files --others --exclude-standard -m | fzf --reverse --multi)
     fad = fadd
+    publish = !git push -u origin $(git symbolic-ref --short HEAD)
 
     # Updating branches
     mup = !git checkout main && git pull && git checkout -
