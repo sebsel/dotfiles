@@ -44,6 +44,8 @@
     merge-commit = merge --no-ff
     nah = !git reset --hard && git clean -df
     wip = !git add . && git commit -m "wip"
+    fadd = !git add $(git ls-files --others --exclude-standard -m | fzf --reverse --multi)
+    fad = fadd
 
     # Updating branches
     mup = !git checkout main && git pull && git checkout -
