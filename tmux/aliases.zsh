@@ -28,16 +28,14 @@ function tpro() {
   projects=$(
     ls -l ~/code/ | awk '$1 ~ /^d/ {print $9}' |
     while read project; do
-      if [[ -f "$HOME/code/$project/.tmux-session-name" ]]; then
-        echo "$(cat $HOME/code/$project/.tmux-session-name),$project"
-      else
+      if [[ -d "$HOME/code/$project/.git" ]]; then
         echo "$project,$project"
       fi
     done; echo "dotfiles,../dotfiles"
   )
 
   session=$(echo "$projects" | xsv table | fzf --select-1 --exit-0 --prompt="tmux > ") || return
-  session_name=$(echo $session | awk '{ print $1 }')
+  session_name=$(echo $session | awk '{ print $1 }' | sed 's/\./-/')
   session_folder=$(echo $session | awk "{ print \"$HOME/code/\" \$2 }")
 
   tmux has-session -t $session_name 2>/dev/null
