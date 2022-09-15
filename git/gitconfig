@@ -6,6 +6,8 @@
     email = seb@seblog.nl
 [push]
     default = upstream
+[pull]
+    ff = only
 [merge]
     ff = only
 [init]
@@ -28,6 +30,8 @@
     p = push
     pl = pull
     s = status -bs
+    f = !git fetch
+    fb = !git fetch && git branch -vv
 
     # Git logs
     sl = log --oneline --decorate -20
@@ -35,18 +39,25 @@
     recent = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' -20
 
     # Convenience
-    resync = !git reset --hard $(git upstream)
     staged = diff --cached
     uncommit = reset --soft HEAD^
-    unstage = reset
     upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
-    ff = merge --ff-only
+    merge-ff = merge --ff-only
     merge-commit = merge --no-ff
     nah = !git reset --hard && git clean -df
     wip = !git add . && git commit -m "wip"
+    gone = "!git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+
+    # Staging
+    unstage = reset
     fadd = !git add $(git ls-files --others --exclude-standard -m | fzf --reverse --multi)
     fad = fadd
+
+    # Branches
+    resync = !git reset --hard $(git upstream)
     publish = !git push -u origin $(git symbolic-ref --short HEAD)
+    bvv = branch -vv
+    bb = branch -vv
 
     # Updating branches
     mup = !git checkout main && git pull && git checkout -
