@@ -15,4 +15,6 @@ osascript ~/dotfiles/applescripts/shower.scpt "Firefox"
 
 osascript ~/dotfiles/applescripts/desktop.scpt "/System/Library/Desktop Pictures/Solid Colors/Blue Violet.png"
 
+osascript -e 'quit app "Desk Controller"'
+
 echo "Enabled Home Mode"

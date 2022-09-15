@@ -16,4 +16,6 @@ osascript ~/dotfiles/applescripts/hider.scpt "Firefox"
 
 osascript ~/dotfiles/applescripts/desktop.scpt "/System/Library/Desktop Pictures/Chroma Red.heic"
 
+open -a "Desk Controller"
+
 echo "Enabled Work Mode"
