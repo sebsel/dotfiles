@@ -24,6 +24,13 @@ omap gl /\u<cr>
 nmap gL ?\u<cr>
 omap gL ?\u<cr>
 
+command! BufOnly silent execute "%bd\|e#\|bd#"
+
+"-> make ctrl-a work as in readline for command mode, which clears up
+"   command mode ctrl-b to work as normal-mode b.
+cnoremap <c-a> <c-b>
+cnoremap <c-b> <s-left>
+
 autocmd VimResized * :wincmd =
 
 " vim: ft=vim
