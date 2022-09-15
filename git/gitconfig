@@ -58,4 +58,8 @@
     tree-hash = rev-parse HEAD^{tree}
     copy-hash = "!git rev-parse HEAD | pbcopy"
 
+    # Github (see git/bin/git-github)
+    pr = github pull/new
+    compare = github compare
+
 # vim: ft=gitconfig

@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+local url
+url=$(git remote get-url $(git remote))
+url=$(echo $url | sed 's/.*github\.com[:\/]\(.*\).git$/https:\/\/github.com\/\1/')
+
+if [ -n "$1" ]; then
+  append="/$1/$(git symbolic-ref --short HEAD)"
+fi
+
+open -u "$url$append"
+
+#vim: syn=zsh
