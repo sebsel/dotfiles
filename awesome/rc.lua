@@ -107,7 +107,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock("%a %d | %H:%M")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -169,7 +169,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "main", "term", "web", "chat", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -192,11 +192,37 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
+        style = {
+          shape = function (cr, w, h) gears.shape.rounded_rect(cr, w, h, 3) end
+        },
+        layout = {
+          spacing = 2,
+          spacing_widget = { { forced_width = 2, widget = wibox.widget.separator},
+            valign = 'center',
+            halign = 'center',
+          },
+          layout = wibox.layout.fixed.horizontal,
+        },
+        widget_template = {
+          {
+            {
+              { id = 'icon_role', widget = wibox.widget.imagebox },
+              margins = 2,
+              widget = wibox.container.margin
+            },
+            id = 'background_role',
+            widget = wibox.container.background,
+          },
+          margins = 2,
+          widget = wibox.container.margin,
+        },
     }
 
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
+
+    myspacing = { widget = wibox.container.margin, left = 10 }
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -206,14 +232,19 @@ awful.screen.connect_for_each_screen(function(s)
             mylauncher,
             s.mytaglist,
             s.mypromptbox,
+            myspacing,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
             mytextclock,
-            s.mylayoutbox,
+            myspacing,
+            wibox.widget.systray(),
+            {
+              s.mylayoutbox,
+              margins = 4,
+              widget = wibox.container.margin
+            },
         },
     }
 end)
@@ -517,6 +548,8 @@ client.connect_signal("manage", function (c)
         -- Prevent clients from being unreachable after screen count changes.
         awful.placement.no_offscreen(c)
     end
+
+    c.shape = function (cr, w, h) gears.shape.rounded_rect(cr, w, h, 10) end
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -530,4 +563,3 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart applications
 awful.spawn.with_shell("picom")
-awful.spawn.with_shell("nitrogen --restore")
