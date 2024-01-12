@@ -36,6 +36,8 @@ ln -sfh ~/dotfiles/hammerspoon/ ~/.hammerspoon
 
 mkdir -p ~/.config
 ln -sfh ~/dotfiles/alacritty/ ~/.config/alacritty
+ln -sfh ~/dotfiles/nitrogen/ ~/.config/nitrogen
+ln -sfh ~/dotfiles/awesome/ ~/.config/awesome
 # ln -sfh ~/dotfiles/yabai/ ~/.config/yabai
 
 # === homescaping ===
