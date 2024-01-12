@@ -36,57 +36,57 @@ y = 0
 [[keyboard.bindings]]
 chars = "\u0002t"
 key = "T"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u0002\u000B"
 key = "K"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00021"
 key = "Key1"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00022"
 key = "Key2"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00023"
 key = "Key3"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00024"
 key = "Key4"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00025"
 key = "Key5"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00026"
 key = "Key6"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00027"
 key = "Key7"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00028"
 key = "Key8"
-mods = "Command"
+mods = "Alt"
 
 [[keyboard.bindings]]
 chars = "\u00029"
 key = "Key9"
-mods = "Command"
+mods = "Alt"
 
 [mouse]
 hide_when_typing = true
