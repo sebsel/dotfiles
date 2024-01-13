@@ -565,3 +565,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart applications
 awful.spawn.with_shell("picom")
+awful.spawn.with_shell("redshift -l $(curl -s \"https://location.services.mozilla.com/v1/geolocate?key=geoclue\" | jq -r '\"\\(.location.lat):\\(.location.lng)\"')")
