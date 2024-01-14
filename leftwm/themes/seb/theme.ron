@@ -1,6 +1,6 @@
 (
   border_width: 2,
-  margin: 6,
+  margin: [1, 6, 6, 6],
   default_border_color: "#222222",
   floating_border_color: "#005500",
   focused_border_color: "#FFB53A",
