@@ -104,6 +104,10 @@
         (command: GotoTag, value: "9", modifier: ["modkey"], key: "9"),
 
         // Assignment
+        (command: MoveWindowTop,         modifier: ["modkey", "Shift"], key: "h"),
+        (command: MoveWindowDown,        modifier: ["modkey", "Shift"], key: "j"),
+        (command: MoveWindowUp,          modifier: ["modkey", "Shift"], key: "k"),
+        (command: MoveWindowToNextWorkspace, modifier: ["modkey", "Shift"], key: "l"),
         (command: MoveToTag, value: "1", modifier: ["modkey", "Shift"], key: "1"),
         (command: MoveToTag, value: "2", modifier: ["modkey", "Shift"], key: "2"),
         (command: MoveToTag, value: "3", modifier: ["modkey", "Shift"], key: "3"),
