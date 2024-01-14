@@ -18,6 +18,9 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- Prebuilt Widgets
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -240,6 +243,7 @@ awful.screen.connect_for_each_screen(function(s)
             mytextclock,
             myspacing,
             wibox.widget.systray(),
+            batteryarc_widget(),
             {
               s.mylayoutbox,
               margins = 4,
@@ -283,6 +287,10 @@ globalkeys = gears.table.join(
     ),
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
+
+    awful.key({ modkey,           }, "q", function () awful.spawn("slock") end,
+
+              {description = "lock the screen", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
