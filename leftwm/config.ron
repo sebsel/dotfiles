@@ -141,6 +141,11 @@
         (command: SetLayout, modifier: ["modkey", "Control"], key: "8", value: "EvenVertical"),
         (command: RotateTag, modifier: ["modkey", "Control"], key: "9"),
 
+        // Media
+        (command: Execute, value: "amixer -q sset Master toggle", modifier: [], key: "XF86XK_AudioMute"),
+        (command: Execute, value: "amixer -q sset Master 5%+", modifier: [], key: "XF86XK_AudioRaiseVolume"),
+        (command: Execute, value: "amixer -q sset Master 5%-", modifier: [], key: "XF86XK_AudioLowerVolume"),
+
     ],
     state_path: None,
 )
