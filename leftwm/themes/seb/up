@@ -15,6 +15,9 @@ leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 if [ -x "$(command -v picom)" ]; then
   picom &> /dev/null &
 fi
+if [ -x "$(command -v feh)" ]; then
+  feh --bg-scale /usr/share/backgrounds/gnome/keys-d.jpg &> /dev/null &
+fi
 if [ -x "$(command -v redshift)" ]; then
   redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') &> /dev/null &
 fi
