@@ -57,9 +57,6 @@
     ],
     window_rules: [
         (window_title: "Picture-in-Picture", spawn_as_type: Normal, spawn_floating: true, spawn_sticky: true),
-        (window_class: "Alacritty", spawn_on_tag: 1),
-        (window_class: "Navigator", spawn_on_tag: 2),
-        (window_class: "firefox", spawn_on_tag: 2),
         (window_class: "Whatsapp", spawn_on_tag: 3),
         (window_class: "TelegramDesktop", spawn_on_tag: 3),
     ],
