@@ -18,7 +18,7 @@ if [ -x "$(command -v picom)" ]; then
 fi
 if [ -x "$(command -v feh)" ]; then
   # Feh for the backgroudn image
-  feh --bg-scale /usr/share/backgrounds/gnome/keys-d.jpg &> /dev/null &
+  feh --bg-scale /usr/share/backgrounds/gnome/keys-l.jpg &> /dev/null &
 fi
 if [ -x "$(command -v redshift)" ]; then
   # Redshift for making my screen more red at night
