@@ -134,10 +134,10 @@
         (command: MoveToTag, value: "9", modifier: ["modkey", "Shift"], key: "9"),
 
         // Layouts
-        (command: DecreaseMainWidth, modifier: ["modkey", "Control"], key: "h"),
+        (command: DecreaseMainWidth, modifier: ["modkey", "Control"], key: "h", value: "1"),
         (command: PreviousLayout,    modifier: ["modkey", "Control"], key: "k"),
         (command: NextLayout,        modifier: ["modkey", "Control"], key: "j"),
-        (command: IncreaseMainWidth, modifier: ["modkey", "Control"], key: "l"),
+        (command: IncreaseMainWidth, modifier: ["modkey", "Control"], key: "l", value: "1"),
         (command: SetLayout, modifier: ["modkey", "Control"], key: "1", value: "Monocle"),
         (command: SetLayout, modifier: ["modkey", "Control"], key: "2", value: "MainAndVertStack"),
         (command: SetLayout, modifier: ["modkey", "Control"], key: "3", value: "CenterMain"),
