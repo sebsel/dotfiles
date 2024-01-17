@@ -13,13 +13,21 @@ leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 
 # boot if it exists
 if [ -x "$(command -v picom)" ]; then
+  # Picom for some transparency
   picom &> /dev/null &
 fi
 if [ -x "$(command -v feh)" ]; then
+  # Feh for the backgroudn image
   feh --bg-scale /usr/share/backgrounds/gnome/keys-d.jpg &> /dev/null &
 fi
 if [ -x "$(command -v redshift)" ]; then
+  # Redshift for making my screen more red at night
   redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') &> /dev/null &
+fi
+if [ -x "$(command -v ibus-daemon)" ]; then
+  # ibus so I can pick the 'English (Macintosh)' keyboard and
+  # have my familiar Alt codes, but with AltGr.
+  ibus-daemon -rxRd
 fi
 
 index=0

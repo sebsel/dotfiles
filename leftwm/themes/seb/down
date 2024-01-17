@@ -6,4 +6,4 @@ leftwm-command "UnloadTheme"
 
 pkill picom
 pkill polybar
-pkill redshift
+redshift -ox
