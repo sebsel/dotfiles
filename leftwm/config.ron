@@ -78,7 +78,7 @@
         (command: Execute, value: "rofi -show calc -modi calc -no-show-match -no-sort",    modifier: ["modkey", "Control"], key: "p"),
         (command: Execute, value: "rofi -show window", modifier: ["modkey"], key: "e"),
         (command: Execute, value: "rofi -show emoji -modi emoji",  modifier: ["modkey", "Shift"], key: "e"),
-        (command: Execute, value: "alacritty", modifier: ["modkey", "Shift"], key: "Return"),
+        (command: Execute, value: "alacritty -e tmux new-session -A -s main", modifier: ["modkey", "Shift"], key: "Return"),
 
         // Window statuses
         (command: CloseWindow, modifier: ["modkey"], key: "q"),

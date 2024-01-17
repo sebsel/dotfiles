@@ -92,8 +92,7 @@ mods = "Alt"
 hide_when_typing = true
 
 [shell]
-args = ["new-session", "-A", "-s", "main"]
-program = "/usr/bin/tmux"
+program = "/usr/bin/zsh"
 
 [window]
 decorations = "none"
