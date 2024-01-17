@@ -53,7 +53,12 @@
     layout_mode: Tag,
     insert_behavior: Bottom,
     scratchpad: [
-        (name: "Alacritty", value: "alacritty", x: 860, y: 390, height: 300, width: 200),
+        // (name: "Alacritty", value: "alacritty", x: 860, y: 390, height: 300, width: 200),
+        (
+          name: "Today", value: "alacritty -e ~/dotfiles/todo/today.zsh",
+          x: 580, y: 60,
+          height: 950, width: 800,
+        ),
     ],
     window_rules: [
         (window_title: "Picture-in-Picture", spawn_as_type: Normal, spawn_floating: true, spawn_sticky: true),
@@ -79,6 +84,9 @@
         (command: Execute, value: "rofi -show window", modifier: ["modkey"], key: "e"),
         (command: Execute, value: "rofi -show emoji -modi emoji",  modifier: ["modkey", "Shift"], key: "e"),
         (command: Execute, value: "alacritty -e tmux new-session -A -s main", modifier: ["modkey", "Shift"], key: "Return"),
+
+        // Scratchpads
+        (command: ToggleScratchPad, value: "Today", modifier: ["modkey"], key: "t"),
 
         // Window statuses
         (command: CloseWindow, modifier: ["modkey"], key: "q"),
