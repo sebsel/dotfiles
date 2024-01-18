@@ -157,6 +157,9 @@
         (command: Execute, value: "light -U 5", modifier: [], key: "XF86XK_MonBrightnessDown"),
         (command: Execute, value: "i3lock -u", modifier: [], key: "XF86XK_Favorites"),
 
+        // This is the correct key name, but I need to find out how to rescan for new monitors.
+        (command: Execute, value: "notify-send 'TODO: xrandr --auto?'", modifier: [], key: "XF86XK_Display"),
+
     ],
     state_path: None,
 )
