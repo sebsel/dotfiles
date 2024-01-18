@@ -31,7 +31,7 @@ function tpro() {
       if [[ -d "$HOME/code/$project/.git" ]]; then
         echo "$project,$project"
       fi
-    done; echo "dotfiles,../dotfiles"
+    done; echo "dotfiles,../dotfiles\nmain,.."
   )
 
   session=$(echo "$projects" | xsv table | fzf --select-1 --exit-0 --prompt="tmux > ") || return
