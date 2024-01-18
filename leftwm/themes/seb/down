@@ -7,5 +7,9 @@ leftwm-command "UnloadTheme"
 pkill picom
 pkill polybar
 pkill xbanish
-pkill redshift
-redshift -ox
+
+# Killing Redshift hard and resetting the screen
+# makes sure sure there is no gitching fading
+# when I reload the LeftWM configuration.
+pkill -KILL redshift
+redshift -oxP

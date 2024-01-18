@@ -22,7 +22,11 @@ if [ -x "$(command -v feh)" ]; then
 fi
 if [ -x "$(command -v redshift)" ]; then
   # Redshift for making my screen more red at night
-  redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') &> /dev/null &
+  redshift \
+    -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') \
+    -b 1.0:0.5 \
+    -t 6500K:2000K \
+    &> /dev/null &
 fi
 if [ -x "$(command -v ibus-daemon)" ]; then
   # ibus so I can pick the 'English (Macintosh)' keyboard and
