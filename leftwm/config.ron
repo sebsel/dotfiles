@@ -152,6 +152,7 @@
         (command: Execute, value: "amixer -q sset Master toggle", modifier: [], key: "XF86XK_AudioMute"),
         (command: Execute, value: "amixer -q sset Master 5%+", modifier: [], key: "XF86XK_AudioRaiseVolume"),
         (command: Execute, value: "amixer -q sset Master 5%-", modifier: [], key: "XF86XK_AudioLowerVolume"),
+        (command: Execute, value: "amixer -q sset Capture toggle", modifier: [], key: "XF86XK_AudioMicMute"),
         (command: Execute, value: "light -A 5", modifier: [], key: "XF86XK_MonBrightnessUp"),
         (command: Execute, value: "light -U 5", modifier: [], key: "XF86XK_MonBrightnessDown"),
         (command: Execute, value: "i3lock -u", modifier: [], key: "XF86XK_Favorites"),
