@@ -157,8 +157,12 @@
         (command: Execute, value: "light -U 5", modifier: [], key: "XF86XK_MonBrightnessDown"),
         (command: Execute, value: "i3lock -u", modifier: [], key: "XF86XK_Favorites"),
 
-        // This is the correct key name, but I need to find out how to rescan for new monitors.
+        // This key actually triggers disconnecting the wifi on some deeper level, but I can add a notification.
+        (command: Execute, value: "notify-send 'Toggled the wifi'", modifier: [], key: "XF86XK_WLAN"),
+
+        // These are the correct key names, but I need to find out how to rescan for new monitors.
         (command: Execute, value: "notify-send 'TODO: xrandr --auto?'", modifier: [], key: "XF86XK_Display"),
+        (command: Execute, value: "notify-send 'TODO: messages?'", modifier: [], key: "XF86XK_Messenger"),
 
     ],
     state_path: None,
