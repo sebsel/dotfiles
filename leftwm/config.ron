@@ -98,7 +98,7 @@
         (command: SoftReload, value: "", modifier: ["modkey", "Shift"], key: "r"),
         (command: HardReload, value: "", modifier: ["modkey", "Shift", "Control"], key: "r"),
         (command: Execute, value: "loginctl kill-session $XDG_SESSION_ID", modifier: ["modkey", "Control", "Shift"], key: "q"),
-        (command: Execute, value: "slock", modifier: ["modkey", "Control"], key: "q"),
+        (command: Execute, value: "i3lock -u", modifier: ["modkey", "Control"], key: "q"),
 
         // Focus
         (command: FocusWorkspacePrevious, modifier: ["modkey"], key: "h"),
@@ -152,7 +152,7 @@
         (command: Execute, value: "amixer -q sset Master toggle", modifier: [], key: "XF86XK_AudioMute"),
         (command: Execute, value: "amixer -q sset Master 5%+", modifier: [], key: "XF86XK_AudioRaiseVolume"),
         (command: Execute, value: "amixer -q sset Master 5%-", modifier: [], key: "XF86XK_AudioLowerVolume"),
-        (command: Execute, value: "slock", modifier: [], key: "XF86XK_Favorites"),
+        (command: Execute, value: "i3lock -u", modifier: [], key: "XF86XK_Favorites"),
 
     ],
     state_path: None,
