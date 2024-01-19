@@ -5,6 +5,10 @@ Plug 'tpope/vim-fugitive'
 cnoreabbrev Gb Git blame
 cnoreabbrev Gbl Git blame
 
+" -> sorry but I don't see why I can't use these casings...
+cnoreabbrev Glog Gclog
+cnoreabbrev Gmove GMove
+
 " -> I have gy as "+y, make it work with the y<c-G> mapping
 nmap <silent> gy<C-G> :<C-U>call setreg('+', fugitive#Object(@%))<CR>
 

@@ -1,13 +1,6 @@
 "==> Text writing and Markdown
 
-Plug 'plasticboy/vim-markdown'
 Plug 'cespare/vim-toml'
-
-"-> Vim Markdown
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_new_list_item_indent = 2
-
 
 "-> I want to toggle this as a sort of 'Text mode'
 "nmap <Leader>vt :set linebreak<cr>
@@ -16,7 +9,6 @@ let g:vim_markdown_new_list_item_indent = 2
 "-> But you know what? Let Vim do it for me
 autocmd FileType markdown,text setlocal linebreak
 autocmd FileType markdown,text setlocal colorcolumn=
-
 
 "==> 'Spelling!'
 

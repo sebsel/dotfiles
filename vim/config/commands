@@ -18,13 +18,27 @@ nmap <leader>so :source %<cr>
 nmap gy "+y
 vmap gy "+y
 
+"-> Keep lines selected
+vmap < <gv
+vmap > >gv
+
+" -> Keep word in register when p in visual
+vmap p "_dP
+
+"-> yank filename of buffer to system clipboard
+nmap gy<c-f> :<C-U>call setreg('+', expand('%'))<cr>
+nmap y<c-f> :<C-U>call setreg('"', expand('%'))<cr>
+
 "-> go to next capital letter
 nmap gl /\u<cr>
 omap gl /\u<cr>
 nmap gL ?\u<cr>
 omap gL ?\u<cr>
 
+"vmap ys :s/\s*\(.*\)/\1
+
 command! BufOnly silent execute "%bd\|e#\|bd#"
+command! BO silent execute "%bd\|e#\|bd#"
 
 "-> make ctrl-a work as in readline for command mode, which clears up
 "   command mode ctrl-b to work as normal-mode b.

@@ -9,24 +9,36 @@ tnoremap <silent> <c-k> <c-w>:TmuxNavigateUp<cr>
 tnoremap <silent> <c-l> <c-w>:TmuxNavigateRight<cr>
 tnoremap <silent> <c-\> <c-w>:TmuxNavigatePrevious<cr>
 
+" -> Fix Ctrl+H,J,K,L for Netrw buffers
+au FileType netrw nnoremap <buffer><silent> <c-h> <c-w>:TmuxNavigateLeft<cr>
+au FileType netrw nnoremap <buffer><silent> <c-j> <c-w>:TmuxNavigateDown<cr>
+au FileType netrw nnoremap <buffer><silent> <c-k> <c-w>:TmuxNavigateUp<cr>
+au FileType netrw nnoremap <buffer><silent> <c-l> <c-w>:TmuxNavigateRight<cr>
+au FileType netrw nnoremap <buffer><silent> <c-\> <c-w>:TmuxNavigatePrevious<cr>
+
 "-> Run commands in a tmux pane
 Plug 'christoomey/vim-tmux-runner'
 
-nmap <silent> <leader>r :wa<cr>:VtrSendCommandToRunner<cr>
+nmap <silent> <leader>r :VtrSendCommandToRunner<cr>
 nmap <silent> <leader>tr :VtrFlushCommand<cr>:VtrSendCommandToRunner<cr>
 nmap <leader>t :VtrSendCommandToRunner<space>
-nmap <leader>to :VtrOpenRunner<cr>
-nmap <leader>tk :VtrKillRunner<cr>
+nmap <leader>to :VtrOpenRunner {'orientation': 'h', 'percentage': 20}<cr>
+nmap <leader>tk :VtrClearRunner<cr>
+nmap <leader>tq :VtrKillRunner<cr>
 nmap <leader>ta :VtrAttachToPane<cr>
 nmap <leader>tl :VtrSendLinesToRunner<cr>
 vmap <leader>tl :VtrSendLinesToRunner<cr>
-nmap <leader>tf :VtrSendCommandToRunner<space>pf<space>
-nmap <leader>tp :VtrSendCommandToRunner<space>p<cr>
+nmap <leader>tf :VtrSendCommandToRunner<space>pf<space><c-r>=expand('%:.:r:gs?/?\\\\\\\\?:s?.?\U\0?')<cr><cr>
+nmap <leader>tg :VtrSendCommandToRunner<space>pf<space>
 nmap <leader>tc :VtrSendCtrlC<cr>
 nmap <leader>td :VtrSendCtrlD<cr>
 nmap <leader>tx :VtrSendCtrlC<cr>:VtrSendCommandToRunner<cr>
 nmap <c-f> :VtrFocusRunner<cr>
 " <c-f> overwrites full page down, which is too big of a jump for me anyway
 " and it's counterpart <c-b> for page up is already taken by tmux also.
+
+"-> FileType specific actions
+au FileType php nmap <silent> <leader>t5 :VtrSendCommandToRunner pa<cr>
+au FileType php nmap <silent> <leader>t6 :VtrSendCommandToRunner pi<cr>
 
 " vim: ft=vim

@@ -1,6 +1,5 @@
 "==> Typescript
 Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
 
 "==> Vue
 Plug 'posva/vim-vue'

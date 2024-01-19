@@ -9,4 +9,6 @@ Plug 'elixir-editors/vim-elixir'
 "-> Two spaces
 autocmd FileType elixir setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
+autocmd BufNewFile,BufRead *.heex :set filetype=eelixir
+
 " vim: ft=vim

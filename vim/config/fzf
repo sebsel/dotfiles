@@ -10,6 +10,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden --ignore-dir .git'
 "-> Like Ctrl+P, but without overwriting <c-p>.
 nmap <leader>e :Files<cr>
 nmap <leader>b :Buffers<cr>
+nmap <leader>g :GFiles?<cr>
 
 nmap <leader>os :Ag<space>
 
