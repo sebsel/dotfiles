@@ -1,0 +1,3 @@
+# Feh for the background image, random wallpapers from a folder
+wallpapers="$HOME/Pictures/Wallpapers/active"
+feh --bg-fill "$wallpapers/$(ls $wallpapers | shuf -n 1 )" &> /dev/null &

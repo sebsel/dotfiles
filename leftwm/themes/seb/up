@@ -17,9 +17,7 @@ if [ -x "$(command -v picom)" ]; then
   picom &> /dev/null &
 fi
 if [ -x "$(command -v feh)" ]; then
-  # Feh for the background image, random wallpapers from a folder
-  wallpapers="$HOME/Pictures/Wallpapers/active"
-  feh --bg-scale "$wallpapers/$(ls $wallpapers | shuf -n 1 )" &> /dev/null &
+  $SCRIPTPATH/new_wallpaper
 fi
 if [ -x "$(command -v redshift)" ]; then
   # Redshift for making my screen more red at night
