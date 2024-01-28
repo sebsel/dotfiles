@@ -1,0 +1,10 @@
+"==> Database stuff
+
+Plug 'tpope/vim-dadbod'
+
+Plug 'kristijanhusak/vim-dadbod-ui'
+let g:db_ui_show_help = 0
+
+nmap <leader>d :DBUIToggle<cr>
+
+" vim: ft=vim
