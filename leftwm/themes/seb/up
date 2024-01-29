@@ -32,6 +32,9 @@ if [ -x "$(command -v ibus-daemon)" ]; then
   # have my familiar Alt codes, but with AltGr.
   ibus-daemon -rxRd
 fi
+if [ -x "$(command -v sxhkd)" ]; then
+  sxhkd &
+fi
 
 index=0
 monitors="$(polybar -m | sed s/:.*//)"
