@@ -69,7 +69,8 @@
     disable_cursor_reposition_on_resize: false,
     keybind: [
         // Launchers
-        (command: Execute, value: "rofi -show combi -modes combi -combi-modes \"window,drun,emoji,calc\"",   modifier: ["modkey"], key: "Return"),
+        (command: Execute, value: "rofi -show combi -modes combi -combi-modes \"window,drun,run,emoji\"",   modifier: ["modkey"], key: "Return"),
+        (command: Execute, value: "rofi -show calc -modi calc -no-show-match -no-sort",   modifier: ["modkey", "Control"], key: "Return"),
         (command: Execute, value: "alacritty -e tmux new-session -A -s main", modifier: ["modkey", "Shift"], key: "Return"),
         (command: Execute, value: "firefox", modifier: ["modkey"], key: "b"),
 
