@@ -73,6 +73,7 @@
         (command: Execute, value: "rofi -show calc -modi calc -no-show-match -no-sort",   modifier: ["modkey", "Control"], key: "Return"),
         (command: Execute, value: "alacritty -e tmux new-session -A -s main", modifier: ["modkey", "Shift"], key: "Return"),
         (command: Execute, value: "firefox", modifier: ["modkey"], key: "b"),
+        (command: Execute, value: "firefox-developer-edition", modifier: ["modkey", "Shift"], key: "b"),
 
         // Scratchpads
         (command: ToggleScratchPad, value: "Logseq", modifier: ["modkey"], key: "t"),
