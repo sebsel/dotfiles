@@ -8,6 +8,10 @@ if [ -n "$1" ]; then
   append="/$1/$(git symbolic-ref --short HEAD)"
 fi
 
-open -u "$url$append"
+if [ $(uname -s) = 'Darwin' ]; then
+  open -u "$url$append"
+else
+  xdg-open "$url$append"
+fi
 
 #vim: syn=zsh
