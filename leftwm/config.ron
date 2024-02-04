@@ -128,13 +128,6 @@
         (command: PreviousLayout,    modifier: ["modkey", "Control"], key: "k"),
         (command: NextLayout,        modifier: ["modkey", "Control"], key: "j"),
         (command: IncreaseMainWidth, modifier: ["modkey", "Control"], key: "l", value: "1"),
-        (command: SetLayout, modifier: ["modkey"], key: "m", value: "m"),
-        (command: SetLayout, modifier: ["modkey"], key: "z", value: "z"),
-        (command: SetLayout, modifier: ["modkey"], key: "e", value: "e"),
-        (command: SetLayout, modifier: ["modkey"], key: "c", value: "c"),
-        (command: SetLayout, modifier: ["modkey"], key: "g", value: "g"),
-        (command: SetLayout, modifier: ["modkey"], key: "d", value: "d"),
-        // (command: RotateTag, modifier: ["modkey"], key: "r"),
 
         // Media & iconed keys
         (command: Execute, value: "amixer -q sset Master toggle", modifier: [], key: "XF86XK_AudioMute"),
