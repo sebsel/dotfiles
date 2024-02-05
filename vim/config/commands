@@ -17,6 +17,7 @@ nmap <leader>so :source %<cr>
 "-> faster yank to system keyboard
 nmap gy "+y
 vmap gy "+y
+nmap gY :%y+<cr>
 
 "-> Keep lines selected
 vmap < <gv
