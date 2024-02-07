@@ -82,6 +82,7 @@
 
         // Window statuses
         (command: CloseWindow, modifier: ["modkey"], key: "q"),
+        (command: CloseWindow, modifier: ["modkey"], key: "w"),
         (command: ToggleFloating, modifier: ["modkey", "Control"], key: "f"),
         (command: ToggleSticky, modifier: ["modkey", "Shift"], key: "f"),
         (command: ToggleFullScreen, modifier: ["modkey"], key: "f"),
