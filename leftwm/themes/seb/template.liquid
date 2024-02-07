@@ -22,4 +22,13 @@
 {% endif %}
 {% endfor %}
 
-%{F#50FFb52A} {{ workspace.layout | truncate: 1, '' }}%{F-}
+%{F#50FFb52A}
+{% if workspace.layout == "Monocle" %}
+ z
+{% elsif workspace.layout == "MainAndDeck" %}
+ d
+{% else %}
+ {{ workspace.layout | truncate: 1, '' }}
+{% endif %}
+%{F-}
+

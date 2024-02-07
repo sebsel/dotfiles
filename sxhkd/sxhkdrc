@@ -1,4 +1,4 @@
 super + r ; {m,z,e,c,g,d}
-  leftwm-command "SetLayout {main,zoom,even,center,grid,deck}" \
+  leftwm-command "SetLayout {main,Monocle,even,center,grid,MainAndDeck}" \
   && notify-send -t 1000 "Layout $(leftwm-state -q | jq -r '.workspaces[0].layout')"
 

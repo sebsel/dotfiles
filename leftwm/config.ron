@@ -27,18 +27,16 @@
     max_window_width: None,
     layouts: [
         "main",
-        "zoom",
-        "deck",
+        "Monocle", // "zoom"
+        "MainAndDeck", // "deck"
         "even",
         "center",
         "grid",
     ],
     layout_definitions: [
-        (name: "zoom", flip: None, rotate: North, reserve: None, columns: (flip: None, rotate: North, main: None, stack: (flip: None, rotate: North, split: None), second_stack: None)),
         (name: "main", flip: None, rotate: North, reserve: None, columns: (flip: None, rotate: North, main: (count: 1, size: 0.5, flip: None, rotate: North, split: Vertical), stack: (flip: None, rotate: North, split: Horizontal), second_stack: None)),
         (name: "even", flip: None, rotate: North, reserve: None, columns: (flip: None, rotate: North, main: None, stack: (flip: None, rotate: North, split: Vertical), second_stack: None)),
         (name: "grid", flip: None, rotate: North, reserve: None, columns: (flip: None, rotate: North, main: None, stack: (flip: None, rotate: North, split: Grid), second_stack: None)),
-        (name: "deck", flip: None, rotate: North, reserve: None, columns: (flip: None, rotate: North, main: (count: 1, size: 0.5, flip: None, rotate: North, split: None), stack: (flip: None, rotate: North, split: None), second_stack: None)),
         (name: "center", flip: None, rotate: North, reserve: Reserve, columns: (flip: None, rotate: North, main: (count: 1, size: 0.5, flip: None, rotate: North, split: Vertical), stack: (flip: None, rotate: North, split: None), second_stack: (flip: None, rotate: North, split: Horizontal))),
     ],
     layout_mode: Tag,
