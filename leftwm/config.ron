@@ -148,7 +148,7 @@
 
         // These are the correct key names, but I need to find out how to rescan for new monitors.
         (command: Execute, value: "notify-send 'TODO: xrandr --auto?'", modifier: [], key: "XF86XK_Display"),
-
+        (command: Execute, value: "notify-send 'TODO: phone up'", modifier: [], key: "XF86XK_Go"),
     ],
     state_path: None,
 )
