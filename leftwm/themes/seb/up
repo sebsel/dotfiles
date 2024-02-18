@@ -48,7 +48,7 @@ do
 done
 
 # Lock the screen when laptop is closed
-xss-lock --transfer-sleep-lock -- i3lock --nofork --no-unlock-indicator
+xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Hide the mouse when typing
 xbanish
