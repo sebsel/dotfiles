@@ -4,6 +4,7 @@ filetype plugin indent on
 
 "-> Keep doing these wrong
 command! Q quit
+command! Qa quitall
 command! W write
 
 "-> Shorter writes
