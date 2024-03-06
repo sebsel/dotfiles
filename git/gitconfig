@@ -66,6 +66,11 @@
     rup = !git checkout release && git pull && git checkout -
     dup = !git checkout develop && git pull && git checkout -
 
+    # Rebasing
+    mre = !git rebase $(git main)
+    rre = rebase release
+    rre = rebase develop
+
     # Get hashes
     short-hash = rev-parse --short HEAD
     tree-hash = rev-parse HEAD^{tree}
