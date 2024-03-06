@@ -3,6 +3,14 @@
 "-> An up to date PHP syntax highlighter
 Plug 'StanAngeloff/php.vim'
 
+" -> a PHP language server
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
+autocmd FileType php nmap <silent><buffer> <c-]> :PhpactorGotoDefinition<cr>
+autocmd FileType php nmap <silent><buffer> <leader>p] :PhpactorFindReferences<cr>
+autocmd FileType php nmap <silent><buffer> <leader>pi :PhpactorImportClass<cr>
+autocmd FileType php nmap <silent><buffer> <leader>h :PhpactorHover<cr>
+
 "-> Sorting namespaces
 nmap <Leader>ps mpgg/namespace<cr>2jvip:sort<cr>`p
 
