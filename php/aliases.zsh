@@ -7,6 +7,8 @@ function pf {
   || ([ -f vendor/bin/phpunit ] && vendor/bin/phpunit --filter $@ ) \
   || echo "No tests found"
 }
+alias pa="vendor/bin/phpstan analyse"
+alias pi="vendor/bin/pint"
 
 # easily switch php-versions with brew
 swphp() {
