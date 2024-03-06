@@ -21,7 +21,7 @@
     b = branch
     c = commit -v
     co = checkout
-    com = checkout main
+    com = !git checkout $(git main)
     cod = checkout develop
     cor = checkout release
     cob = checkout -b
@@ -59,9 +59,10 @@
     publish = !git push -u origin $(git symbolic-ref --short HEAD)
     bvv = branch -vv
     bb = branch -vv
+    main = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
 
     # Updating branches
-    mup = !git checkout main && git pull && git checkout -
+    mup = !git checkout $(git main) && git pull && git checkout -
     rup = !git checkout release && git pull && git checkout -
     dup = !git checkout develop && git pull && git checkout -
 
