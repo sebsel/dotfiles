@@ -25,6 +25,7 @@
     com = !git checkout $(git main)
     cod = checkout develop
     cor = checkout release
+    co- = checkout -
     cob = checkout -b
     cof = "!git checkout $(git branch --format '%(refname:short)' | fzf)"
     d = diff
