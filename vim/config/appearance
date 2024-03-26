@@ -9,8 +9,6 @@ set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
 
 "==> Syntax
 syntax enable
-colorscheme afterglow "TODO where did I pull afterglow from?
-
 
 "==> Numbers and relative numbers
 set number
@@ -42,21 +40,6 @@ set mouse=a
 "-> Take better chars for those invisible characters
 set listchars=tab:▸\ ,eol:¬,space:∙,nbsp:◦
 
-
-"==> Layout tweaking
-
-"-> remove the background color from the numberbar
-highlight LineNr ctermbg=bg
-
-"-> hide the dashes between vertical splits
-highlight vertsplit ctermbg=bg ctermfg=bg
-
-"-> highlight tab-characters to warn you
-highlight tab ctermbg=green
-
-"-> Jeffrey Way's left padding hack
-set foldcolumn=1
-highlight foldcolumn ctermbg=bg
 
 "-> Look ahead one line when scrolling down
 set scrolloff=1

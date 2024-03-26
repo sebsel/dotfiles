@@ -23,4 +23,13 @@ endfunction
 filetype plugin on
 call plug#begin('~/.vim/bundle')
 call s:SourceConfigFilesIn('config')
+"-> Themes
+Plug 'rebelot/kanagawa.nvim'
+Plug 'savq/melange-nvim'
+Plug 'folke/tokyonight.nvim'
 call plug#end()
+
+colorscheme kanagawa
+
+"-> Jeffrey Way's left padding hack
+set foldcolumn=1

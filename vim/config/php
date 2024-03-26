@@ -1,8 +1,5 @@
 "==> PHP
 
-"-> An up to date PHP syntax highlighter
-Plug 'StanAngeloff/php.vim'
-
 " -> a PHP language server
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 
@@ -15,6 +12,8 @@ autocmd FileType php nmap <silent><buffer> <leader>pc :PhpactorClassNew<cr>
 autocmd FileType php nmap <silent><buffer> <leader>h :PhpactorHover<cr>
 
 autocmd FileType php nmap <silent><buffer> <leader>l :PhpactorContextMenu<cr>
+
+autocmd FileType php TSEnable indent
 
 "-> Sorting namespaces
 nmap <Leader>ps mpgg/namespace<cr>2jvip:sort<cr>`p

@@ -1,0 +1,7 @@
+"==> Treesitting syntax highlights
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+autocmd VimEnter * TSEnable highlight
+
+" vim: ft=vim
