@@ -3,6 +3,9 @@
 "==> All the colors
 set t_Co=256
 
+"==> Throw in a statusline
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+
 
 "==> Syntax
 syntax enable
