@@ -13,6 +13,7 @@ cnoreabbrev Gmove GMove
 nmap <silent> gy<C-G> :<C-U>call setreg('+', fugitive#Object(@%))<CR>
 
 Plug 'tpope/vim-rhubarb'
+Plug 'shumphrey/fugitive-gitlab.vim'
 
 " -> prepend the commit message with the branch name (the current ticket)
 autocmd FileType gitcommit nmap <silent><buffer> <leader>pb i[<c-r>=system('git rev-parse --abbrev-ref HEAD \| tr -d "\n"')<cr>]<space>
