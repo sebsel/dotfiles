@@ -33,6 +33,7 @@
     p = push
     pl = pull
     pfwl = push --force-with-lease
+    fpwl = push --force-with-lease
     s = status -bs
     f = !git fetch
     fb = !git fetch && git branch -vv
